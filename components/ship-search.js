@@ -1,14 +1,24 @@
 import React from "react";
+import { orderBy } from "lodash";
+import algoliasearch from "algoliasearch/lite";
 import {
   RefinementList,
   SearchBox,
   Hits,
+  HitsPerPage,
   Configure,
   Highlight,
   Pagination,
+  ToggleRefinement,
+  ClearRefinements,
   PoweredBy
 } from "react-instantsearch-dom";
 import { InstantSearch } from "./instantsearch";
+
+const searchClient = algoliasearch(
+  "LBEZ4EW674",
+  "a75591ffd502c0f33a9ba1735b496208"
+);
 
 const HitComponent = ({ hit }) => (
   <div className="hit">
@@ -40,9 +50,8 @@ const HitComponent = ({ hit }) => (
 export default function ShipSearch(props) {
   return (
     <InstantSearch
-      appId="LBEZ4EW674"
-      apiKey="a75591ffd502c0f33a9ba1735b496208"
       indexName="sc_ships"
+      searchClient={searchClient}
       resultsState={props.resultsState}
       onSearchStateChange={props.onSearchStateChange}
       searchState={props.searchState}
@@ -55,7 +64,19 @@ export default function ShipSearch(props) {
       </header>
       <content>
         <menu>
-          <RefinementList attribute="categories" />
+          <ClearRefinements />
+          <HitsPerPage
+            defaultRefinement={5}
+            items={[
+              { value: 5, label: "Show 5 hits" },
+              { value: 10, label: "Show 10 hits" }
+            ]}
+          />
+          <RefinementList
+            attribute="manufacturer"
+            transformItems={items => orderBy(items, "label", "asc")}
+            showMore
+          />
         </menu>
         <results>
           <Hits hitComponent={HitComponent} />

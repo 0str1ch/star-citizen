@@ -38,6 +38,8 @@
     "pretty-quick": "^1.10.0"
   },
   "dependencies": {
+    "algoliasearch": "^3.34.0",
+    "lodash": "^4.17.15",
     "next": "9.0.5",
     "prop-types": "15.6.2",
     "qs": "6.8.0",
