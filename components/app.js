@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
   RefinementList,
   SearchBox,
   Hits,
   Configure,
   Highlight,
-  Pagination,
-} from 'react-instantsearch-dom';
-import { InstantSearch } from './instantsearch';
+  Pagination
+} from "react-instantsearch-dom";
+import { InstantSearch } from "./instantsearch";
 
 const HitComponent = ({ hit }) => (
   <div className="hit">
@@ -34,7 +34,7 @@ const HitComponent = ({ hit }) => (
 );
 
 HitComponent.propTypes = {
-  hit: PropTypes.object,
+  hit: PropTypes.object
 };
 
 export default class extends React.Component {
@@ -42,7 +42,7 @@ export default class extends React.Component {
     searchState: PropTypes.object,
     resultsState: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     onSearchStateChange: PropTypes.func,
-    createURL: PropTypes.func,
+    createURL: PropTypes.func
   };
 
   render() {
@@ -72,10 +72,10 @@ export default class extends React.Component {
         <footer>
           <Pagination />
           <div>
-            See{' '}
+            See{" "}
             <a href="https://github.com/algolia/react-instantsearch/tree/master/examples/next">
               source code
-            </a>{' '}
+            </a>{" "}
             on github
           </div>
         </footer>
