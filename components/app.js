@@ -1,67 +1,69 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   RefinementList,
   SearchBox,
   Hits,
   Configure,
   Highlight,
-  Pagination
-} from 'react-instantsearch/dom'
-import { InstantSearch } from './instantsearch'
+  Pagination,
+} from 'react-instantsearch-dom';
+import { InstantSearch } from './instantsearch';
 
 const HitComponent = ({ hit }) => (
-  <div className='hit'>
+  <div className="hit">
     <div>
-      <div className='hit-picture'>
+      <div className="hit-picture">
         <img src={`${hit.media}`} />
       </div>
     </div>
-    <div className='hit-content'>
+    <div className="hit-content">
       <div>
-        <Highlight attributeName='name' hit={hit} />
+        <Highlight attribute="name" hit={hit} />
         <span> - {hit.name}</span>
-        <span> - {hit.manufacturer}</span>
+        <span> - {hit.manufacturer} stars</span>
       </div>
-      <div className='hit-type'>
-        <Highlight attributeName='type' hit={hit} />
+      <div className="hit-type">
+        <Highlight attribute="type" hit={hit} />
       </div>
-      <div className='hit-description'>
-        <Highlight attributeName='description' hit={hit} />
+      <div className="hit-description">
+        <Highlight attribute="description" hit={hit} />
       </div>
     </div>
   </div>
-)
+);
 
 HitComponent.propTypes = {
-  hit: PropTypes.object
-}
+  hit: PropTypes.object,
+};
 
 export default class extends React.Component {
   static propTypes = {
     searchState: PropTypes.object,
     resultsState: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-    onSearchStateChange: PropTypes.func
-  }
+    onSearchStateChange: PropTypes.func,
+    createURL: PropTypes.func,
+  };
 
-  render () {
+  render() {
     return (
       <InstantSearch
-        appId='6IY46XKPVP' // change this
-        apiKey='53f9d16117669ff762a06d0538e41ad1' // change this
-        indexName='sc-ships' // change this
+        appId="LBEZ4EW674"
+        apiKey="a75591ffd502c0f33a9ba1735b496208"
+        indexName="sc_ships"
         resultsState={this.props.resultsState}
         onSearchStateChange={this.props.onSearchStateChange}
         searchState={this.props.searchState}
+        createURL={this.props.createURL}
       >
-        <Configure hitsPerPage={10} />
+        <Configure hitsPerPage={12} />
         <header>
-          <h1>Star Citizen Ship Index</h1>
+          <h1>React InstantSearch + Next.Js</h1>
           <SearchBox />
         </header>
         <content>
           <menu>
-            <RefinementList attribute="name" />
+            <RefinementList attribute="categories" />
           </menu>
           <results>
             <Hits hitComponent={HitComponent} />
@@ -70,10 +72,14 @@ export default class extends React.Component {
         <footer>
           <Pagination />
           <div>
-            
+            See{' '}
+            <a href="https://github.com/algolia/react-instantsearch/tree/master/examples/next">
+              source code
+            </a>{' '}
+            on github
           </div>
         </footer>
       </InstantSearch>
-    )
+    );
   }
 }
