@@ -71,13 +71,6 @@ export default class extends React.Component {
         </content>
         <footer>
           <Pagination />
-          <div>
-            See{" "}
-            <a href="https://github.com/algolia/react-instantsearch/tree/master/examples/next">
-              source code
-            </a>{" "}
-            on github
-          </div>
         </footer>
       </InstantSearch>
     );
