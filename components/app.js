@@ -58,7 +58,7 @@ export default class extends React.Component {
       >
         <Configure hitsPerPage={12} />
         <header>
-          <h1>React InstantSearch + Next.Js</h1>
+          <h1>Search all of the ships and vehicles in Star Citizen</h1>
           <SearchBox />
         </header>
         <content>
