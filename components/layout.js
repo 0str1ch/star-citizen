@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Theme from "./theme";
+import Header from "./header";
 
 function Layout({ title, description, children }) {
   return (
@@ -16,7 +17,7 @@ function Layout({ title, description, children }) {
       </Head>
       <Theme />
       {/* <Gridlines /> */}
-      <header />
+      <Header />
       <main className="layout-wrapper">
         {children}
 
