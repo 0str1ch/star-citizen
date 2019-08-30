@@ -3,6 +3,7 @@ import { orderBy } from "lodash";
 import algoliasearch from "algoliasearch/lite";
 import {
   RefinementList,
+  ScrollTo,
   SearchBox,
   Hits,
   HitsPerPage,
@@ -10,6 +11,7 @@ import {
   Highlight,
   Pagination,
   ToggleRefinement,
+  CurrentRefinements,
   ClearRefinements,
   PoweredBy
 } from "react-instantsearch-dom";
@@ -31,14 +33,14 @@ export default function ShipSearch(props) {
       onSearchStateChange={props.onSearchStateChange}
       searchState={props.searchState}
       createURL={props.createURL}
+      stalledSearchDelay={500}
     >
       <Configure hitsPerPage={5} />
       <div>
-        <CustomSearchBox autoFocus />
+        <CustomSearchBox />
       </div>
       <content>
         <menu>
-          <ClearRefinements />
           <Pagination />
           <HitsPerPage
             defaultRefinement={5}
@@ -53,6 +55,8 @@ export default function ShipSearch(props) {
             transformItems={items => orderBy(items, "label", "asc")}
             showMore
           />
+          <CurrentRefinements clearsQuery />
+          <ClearRefinements />
           <style jsx global>
             {`
               .ais-RefinementList-list,
@@ -69,9 +73,11 @@ export default function ShipSearch(props) {
             `}
           </style>
         </menu>
-        <div>
-          <InfiniteHits />
-        </div>
+        <ScrollTo>
+          <div>
+            <InfiniteHits />
+          </div>
+        </ScrollTo>
       </content>
       <footer>
         <PoweredBy />

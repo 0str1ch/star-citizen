@@ -1,7 +1,7 @@
 import { connectSearchBox } from "react-instantsearch-dom";
 
 function showStalled() {
-  return console.log("Searching is stalled...");
+  return "Searching is stalled...";
 }
 
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
