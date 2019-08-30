@@ -79,6 +79,15 @@ export default function ShipSearch(props) {
             transformItems={items => orderBy(items, "label", "asc")}
             showMore
           />
+          <style jsx global>
+            {`
+              .ais-RefinementList-list,
+              .ais-InfiniteHits-list,
+              .ais-Pagination-list {
+                list-style: none;
+              }
+            `}
+          </style>
         </menu>
         <results>
           <InfiniteHits hitComponent={HitComponent} />
