@@ -24,7 +24,7 @@ function InfiniteHits(props) {
   const { hits } = props;
 
   return (
-    <div className="ais-InfiniteHits">
+    <div className="search-results">
       <ul className="ais-InfiniteHits-list">
         {hits.map(hit => (
           <li key={hit.objectID}>
@@ -46,6 +46,9 @@ function InfiniteHits(props) {
       </ul>
       <style jsx>
         {`
+          div.search-results {
+            padding: var(--outer-padding);
+          }
           ul {
             display: flex;
             flex-direction: column;
