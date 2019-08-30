@@ -96,7 +96,7 @@ export default function ShipSearch(props) {
         </results>
       </content>
       <footer>
-        <CustomPoweredBy />
+        <PoweredBy />
       </footer>
     </InstantSearch>
   );
