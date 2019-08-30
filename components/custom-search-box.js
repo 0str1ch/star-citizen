@@ -6,29 +6,36 @@ function showStalled() {
 
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
   <div className="search-wrapper">
-    <form noValidate action="" role="search">
+    <form noValidate action="" role="search" className="searchbox">
       <input
         type="search"
         value={currentRefinement}
         onChange={event => refine(event.currentTarget.value)}
       />
-      <button onClick={() => refine("")} type="submit">
+      <button
+        onClick={() => refine("")}
+        type="submit"
+        className="reset-button button"
+      >
         Reset search
       </button>
       {isSearchStalled ? showStalled() : ""}
-      <style jsx>
+      <style jsx global>
         {`
           div.search-wrapper {
             position: sticky;
             top: 0;
+            z-index: 20;
+            background: var(--dark-bg);
+            padding: var(--outer-padding);
           }
-          form {
+          form.searchbox {
           }
 
-          input {
+          form.searchbox input {
           }
 
-          button {
+          form.searchbox button {
           }
         `}
       </style>
