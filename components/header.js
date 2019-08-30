@@ -1,11 +1,14 @@
 import React from "react";
 import Logo from "./logo";
+import ActiveLink from "./active-link";
 
 export default function Header() {
   return (
     <header>
       <div className="logo-wrapper">
-        <Logo color="var(--white)" />
+        <ActiveLink href="/">
+          <Logo color="var(--white)" />
+        </ActiveLink>
       </div>
       <p>Browse the Star Citizen™ ship matrix</p>
       <style jsx>

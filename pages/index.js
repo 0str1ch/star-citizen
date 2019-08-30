@@ -4,6 +4,7 @@ import Router from "next/router";
 import qs from "qs";
 import { Head, findResultsState, ShipSearch } from "../components";
 import Layout from "../components/layout";
+import UIButton from "../components/ui-button";
 
 const updateAfter = 700;
 
@@ -57,6 +58,7 @@ export default class extends React.Component {
     return (
       <Layout>
         <section>
+          <UIButton href="/">Hi there</UIButton>
           <ShipSearch
             resultsState={this.props.resultsState}
             onSearchStateChange={this.onSearchStateChange}
