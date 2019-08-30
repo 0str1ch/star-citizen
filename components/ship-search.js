@@ -67,10 +67,11 @@ export default function ShipSearch(props) {
         <menu>
           <ClearRefinements />
           <HitsPerPage
-            defaultRefinement={5}
+            defaultRefinement={10}
             items={[
               { value: 5, label: "Show 5 results" },
-              { value: 10, label: "Show 10 results" }
+              { value: 10, label: "Show 10 results" },
+              { value: 25, label: "Show 25 results" }
             ]}
           />
           <RefinementList
