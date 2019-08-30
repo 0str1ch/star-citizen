@@ -20,14 +20,18 @@ export default function Header() {
             place-items: center center;
           }
 
-          header div.logo-wrapper {
-            max-width: 15rem;
-            width: 15rem;
-          }
           p {
             margin-top: 0.5rem;
             font-size: var(--text-small);
             color: var(--glow);
+          }
+        `}
+      </style>
+      <style jsx global>
+        {`
+          header div.logo-wrapper svg {
+            max-width: 15rem;
+            width: 15rem;
           }
         `}
       </style>
