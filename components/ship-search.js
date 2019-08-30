@@ -32,10 +32,9 @@ export default function ShipSearch(props) {
       createURL={props.createURL}
     >
       <Configure hitsPerPage={5} />
-      <header>
-        <h1>Search all of the ships and vehicles in Star Citizen</h1>
+      <div>
         <SearchBox />
-      </header>
+      </div>
       <content>
         <menu>
           <ClearRefinements />

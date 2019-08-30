@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import { connectInfiniteHits, Highlight } from "react-instantsearch-dom";
 
 function InfiniteHits(props) {

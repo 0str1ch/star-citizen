@@ -56,7 +56,7 @@ export default class extends React.Component {
   render() {
     return (
       <Layout>
-        <div>
+        <section>
           <ShipSearch
             resultsState={this.props.resultsState}
             onSearchStateChange={this.onSearchStateChange}
@@ -66,7 +66,7 @@ export default class extends React.Component {
                 : this.props.searchState
             }
           />
-        </div>
+        </section>
       </Layout>
     );
   }
