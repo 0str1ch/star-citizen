@@ -4,19 +4,17 @@ import { connectInfiniteHits, Highlight } from "react-instantsearch-dom";
 function InfiniteHits(props) {
   let sentinel = null;
 
-  const onSentinelIntersection = entries => {
-    const { hasMore, refine } = props;
-
-    entries.forEach(entry => {
-      if (entry.isIntersecting && hasMore) {
-        refine();
-      }
-    });
-  };
-
   useEffect(() => {
-    const observer = new IntersectionObserver(onSentinelIntersection);
+    const onSentinelIntersection = entries => {
+      const { hasMore, refine } = props;
 
+      entries.forEach(entry => {
+        if (entry.isIntersecting && hasMore) {
+          refine();
+        }
+      });
+    };
+    const observer = new IntersectionObserver(onSentinelIntersection);
     observer.observe(sentinel);
     return () => {
       observer.disconnect();
