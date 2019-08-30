@@ -43,6 +43,7 @@ export default class StarCitizenSearchDB extends Document {
             color="#9d72de"
           />
           <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link rel="stylesheet" href="/static/normalize.css" />
           <meta name="theme-color" content="#ffffff" />
           <meta name="msapplication-navbutton-color" content="#000000" />
           <meta
