@@ -66,6 +66,7 @@ export default function ShipSearch(props) {
       <content>
         <menu>
           <ClearRefinements />
+          <Pagination />
           <HitsPerPage
             defaultRefinement={10}
             items={[
@@ -94,7 +95,6 @@ export default function ShipSearch(props) {
         </results>
       </content>
       <footer>
-        <Pagination />
         <PoweredBy />
       </footer>
     </InstantSearch>
