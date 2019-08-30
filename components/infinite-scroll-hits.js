@@ -58,6 +58,7 @@ function InfiniteHits(props) {
           li {
             display: flex;
             flex-direction: column;
+            margin: 2rem 0;
           }
 
           .ship-name,

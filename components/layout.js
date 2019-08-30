@@ -423,7 +423,7 @@ function Layout({ title, description, children }) {
 
             label {
               background-color: #fff;
-              color: var(--primary);
+              color: var(--primary-hue);
               font-size: 1em;
               opacity: 1;
               transform: translateY(0);
@@ -454,7 +454,7 @@ function Layout({ title, description, children }) {
             textarea:focus {
               border-color: var(--hue-1);
               background: #fff;
-              box-shadow: 0 0 2px rgba(17, 169, 94, 0.5);
+              box-shadow: 0 0 2px var(--glow);
               color: var(--primary-text);
               z-index: 1;
               outline: none;
@@ -482,7 +482,7 @@ function Layout({ title, description, children }) {
               padding: 0 1em;
               border: 1px solid var(--hint);
               background: #fff;
-              color: rgba(3, 27, 78, 0.7);
+              color: var(--primary-hue);
               transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
               border-radius: var(--border-radius);
               width: 100%;
