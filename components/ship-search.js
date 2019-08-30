@@ -13,6 +13,7 @@ import {
   ToggleRefinement,
   CurrentRefinements,
   ClearRefinements,
+  Stats,
   PoweredBy
 } from "react-instantsearch-dom";
 import { InstantSearch } from "./instantsearch";
@@ -41,6 +42,7 @@ export default function ShipSearch(props) {
       </div>
       <content>
         <menu>
+          <Stats />
           <Pagination />
           <HitsPerPage
             defaultRefinement={5}
