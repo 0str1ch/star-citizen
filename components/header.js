@@ -21,6 +21,7 @@ export default function Header() {
           }
 
           header div.logo-wrapper {
+            max-width: 15rem;
             width: 15rem;
           }
           p {

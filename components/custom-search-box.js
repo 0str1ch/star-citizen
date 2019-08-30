@@ -26,7 +26,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
             position: sticky;
             top: 0;
             z-index: 20;
-            background: var(--dark-bg);
+            background: var(--primary-hue);
             padding: var(--outer-padding);
           }
           form.searchbox {
