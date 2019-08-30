@@ -5,6 +5,7 @@ import {
   RefinementList,
   SearchBox,
   Hits,
+  InfiniteHits,
   HitsPerPage,
   Configure,
   Highlight,
@@ -68,8 +69,8 @@ export default function ShipSearch(props) {
           <HitsPerPage
             defaultRefinement={5}
             items={[
-              { value: 5, label: "Show 5 hits" },
-              { value: 10, label: "Show 10 hits" }
+              { value: 5, label: "Show 5 results" },
+              { value: 10, label: "Show 10 results" }
             ]}
           />
           <RefinementList
@@ -79,7 +80,7 @@ export default function ShipSearch(props) {
           />
         </menu>
         <results>
-          <Hits hitComponent={HitComponent} />
+          <InfiniteHits hitComponent={HitComponent} />
         </results>
       </content>
       <footer>
