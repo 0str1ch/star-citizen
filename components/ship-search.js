@@ -16,7 +16,7 @@ import {
 import { InstantSearch } from "./instantsearch";
 import CustomPoweredBy from "./custom-powered-by";
 import CustomInfiniteHits from "./custom-infinite-hits";
-import InfiniteHits from "./infinite-scroll-hits-function";
+import InfiniteHits from "./infinite-scroll-hits";
 
 const searchClient = algoliasearch(
   "LBEZ4EW674",
