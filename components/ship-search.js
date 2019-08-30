@@ -68,7 +68,7 @@ export default function ShipSearch(props) {
           <ClearRefinements />
           <Pagination />
           <HitsPerPage
-            defaultRefinement={10}
+            defaultRefinement={5}
             items={[
               { value: 5, label: "Show 5 results" },
               { value: 10, label: "Show 10 results" },
