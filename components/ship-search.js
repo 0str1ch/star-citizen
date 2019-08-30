@@ -5,7 +5,6 @@ import {
   RefinementList,
   SearchBox,
   Hits,
-  InfiniteHits,
   HitsPerPage,
   Configure,
   Highlight,
@@ -16,6 +15,8 @@ import {
 } from "react-instantsearch-dom";
 import { InstantSearch } from "./instantsearch";
 import CustomPoweredBy from "./custom-powered-by";
+import CustomInfiniteHits from "./custom-infinite-hits";
+import InfiniteHits from "./infinite-scroll-hits-function";
 
 const searchClient = algoliasearch(
   "LBEZ4EW674",
@@ -59,7 +60,7 @@ export default function ShipSearch(props) {
       searchState={props.searchState}
       createURL={props.createURL}
     >
-      <Configure hitsPerPage={12} />
+      <Configure hitsPerPage={5} />
       <header>
         <h1>Search all of the ships and vehicles in Star Citizen</h1>
         <SearchBox />
@@ -91,9 +92,9 @@ export default function ShipSearch(props) {
             `}
           </style>
         </menu>
-        <results>
+        <div>
           <InfiniteHits hitComponent={HitComponent} />
-        </results>
+        </div>
       </content>
       <footer>
         <PoweredBy />

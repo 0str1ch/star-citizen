@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Router from "next/router";
 import qs from "qs";
 import { Head, findResultsState, ShipSearch } from "../components";
+import Layout from "../components/layout";
 
 const updateAfter = 700;
 
@@ -33,6 +34,14 @@ export default class extends React.Component {
     return { resultsState, searchState };
   }
 
+  componentDidMount() {
+    this.setState({ searchState: qs.parse(window.location.search.slice(1)) });
+  }
+
+  componentWillReceiveProps() {
+    this.setState({ searchState: qs.parse(window.location.search.slice(1)) });
+  }
+
   onSearchStateChange = searchState => {
     clearTimeout(this.debouncedSetState);
     this.debouncedSetState = setTimeout(() => {
@@ -44,18 +53,9 @@ export default class extends React.Component {
     this.setState({ searchState });
   };
 
-  componentDidMount() {
-    this.setState({ searchState: qs.parse(window.location.search.slice(1)) });
-  }
-
-  componentWillReceiveProps() {
-    this.setState({ searchState: qs.parse(window.location.search.slice(1)) });
-  }
-
   render() {
     return (
-      <div>
-        <Head title="Home" />
+      <Layout>
         <div>
           <ShipSearch
             resultsState={this.props.resultsState}
@@ -67,7 +67,7 @@ export default class extends React.Component {
             }
           />
         </div>
-      </div>
+      </Layout>
     );
   }
 }
