@@ -5,29 +5,35 @@ function showStalled() {
 }
 
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
-  <form noValidate action="" role="search">
-    <input
-      type="search"
-      value={currentRefinement}
-      onChange={event => refine(event.currentTarget.value)}
-    />
-    <button onClick={() => refine("")} type="submit">
-      Reset search
-    </button>
-    {isSearchStalled ? showStalled() : ""}
-    <style jsx>
-      {`
-        form {
-        }
+  <div className="search-wrapper">
+    <form noValidate action="" role="search">
+      <input
+        type="search"
+        value={currentRefinement}
+        onChange={event => refine(event.currentTarget.value)}
+      />
+      <button onClick={() => refine("")} type="submit">
+        Reset search
+      </button>
+      {isSearchStalled ? showStalled() : ""}
+      <style jsx>
+        {`
+          div.search-wrapper {
+            position: sticky;
+            top: 0;
+          }
+          form {
+          }
 
-        input {
-        }
+          input {
+          }
 
-        button {
-        }
-      `}
-    </style>
-  </form>
+          button {
+          }
+        `}
+      </style>
+    </form>
+  </div>
 );
 
 const CustomSearchBox = connectSearchBox(SearchBox);

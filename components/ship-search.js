@@ -37,9 +37,7 @@ export default function ShipSearch(props) {
       stalledSearchDelay={500}
     >
       <Configure hitsPerPage={5} />
-      <div>
-        <CustomSearchBox />
-      </div>
+      <CustomSearchBox />
       <content>
         <menu>
           <Stats />
