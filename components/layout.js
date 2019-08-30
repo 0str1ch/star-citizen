@@ -152,6 +152,8 @@ function Layout({ title, description, children }) {
             ol,
             ul {
               list-style: none;
+              margin: 0;
+              padding: 0;
             }
 
             * + address,

@@ -15,6 +15,7 @@ import {
 } from "react-instantsearch-dom";
 import { InstantSearch } from "./instantsearch";
 import InfiniteHits from "./infinite-scroll-hits";
+import CustomSearchBox from "./custom-search-box";
 
 const searchClient = algoliasearch(
   "LBEZ4EW674",
@@ -33,7 +34,7 @@ export default function ShipSearch(props) {
     >
       <Configure hitsPerPage={5} />
       <div>
-        <SearchBox />
+        <CustomSearchBox autoFocus />
       </div>
       <content>
         <menu>
@@ -57,6 +58,12 @@ export default function ShipSearch(props) {
               .ais-RefinementList-list,
               .ais-InfiniteHits-list,
               .ais-Pagination-list {
+                list-style: none;
+              }
+
+              menu {
+                margin: 0;
+                padding: 0;
                 list-style: none;
               }
             `}
