@@ -15,6 +15,7 @@ import {
   PoweredBy
 } from "react-instantsearch-dom";
 import { InstantSearch } from "./instantsearch";
+import CustomPoweredBy from "./custom-powered-by";
 
 const searchClient = algoliasearch(
   "LBEZ4EW674",
@@ -95,7 +96,7 @@ export default function ShipSearch(props) {
         </results>
       </content>
       <footer>
-        <PoweredBy />
+        <CustomPoweredBy />
       </footer>
     </InstantSearch>
   );
