@@ -136,14 +136,13 @@ export default function ShipSearch(props) {
               }
             `}
           </style>
-          <footer>
-            <PoweredBy />
-          </footer>
+          <footer></footer>
         </menu>
         <content>
           <div>
             <InfiniteHits />
           </div>
+          <PoweredBy />
         </content>
       </section>
     </InstantSearch>

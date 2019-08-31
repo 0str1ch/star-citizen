@@ -75,7 +75,7 @@ function InfiniteHits(props) {
           li {
             display: flex;
             flex-direction: column;
-            margin-bottom: 2rem;
+            margin-bottom: var(--outer-padding);
             border: 1px solid var(--highlight-hue);
             border-radius: var(--border-radius);
             overflow: hidden;
