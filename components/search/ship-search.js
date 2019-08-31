@@ -113,6 +113,9 @@ export default function ShipSearch(props) {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 cursor: pointer;
+                display: flex;
+                place-content: space-between;
+                place-items: center;
               }
 
               .ais-RefinementList-labelText {
@@ -121,19 +124,11 @@ export default function ShipSearch(props) {
 
               .ais-RefinementList-count {
                 font-size: 50%;
-                width: 1.1rem;
-                position: absolute;
-                right: 0;
-                top: 0.4rem;
-                height: 1.1rem;
-                padding-top: 1px;
-                display: inline-flex;
-                place-content: center center;
-                place-items: center;
+                width: 1rem;
+                height: 2rem;
                 vertical-align: middle;
-                line-height: unset;
+                line-height: 2rem;
                 color: var(--glow);
-                place-self: flex-start;
               }
             `}
           </style>
