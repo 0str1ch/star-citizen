@@ -1,7 +1,7 @@
 import { connectSearchBox } from "react-instantsearch-dom";
 
 function showStalled() {
-  return "Searching is stalled...";
+  return "Search is booting up...";
 }
 
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
@@ -9,7 +9,9 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
     <form noValidate action="" role="search" className="searchbox">
       <input
         type="search"
-        placeholder="Type to initiate searching..."
+        placeholder={
+          isSearchStalled ? showStalled() : "Type to start searching..."
+        }
         value={currentRefinement}
         onChange={event => refine(event.currentTarget.value)}
       />
@@ -20,7 +22,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
       >
         Reset search
       </button>
-      {isSearchStalled ? showStalled() : ""}
+
       <style jsx global>
         {`
           div.search-wrapper {

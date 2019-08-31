@@ -5,7 +5,8 @@ export default () => (
         :root {
           /** New color scheme **/
           --primary-hue: rgb(28, 38, 54);
-          --dark-bg: #131a21;
+          --dark-bg: #0b101a;
+          --medium-blue: #1c2838;
           --highlight-hue: rgb(139, 223, 255);
           --glow: #da9e00;
           --grey: rgb(43, 47, 49);

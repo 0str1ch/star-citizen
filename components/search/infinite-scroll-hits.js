@@ -62,6 +62,12 @@ function InfiniteHits(props) {
             display: flex;
             flex-direction: column;
             margin: 2rem 0;
+            border: 1px solid var(--highlight-hue);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            background: var(--dark-bg);
+            color: var(--highlight-hue);
+            box-shadow: var(--box-shadow);
           }
 
           .ship-name,

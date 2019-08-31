@@ -540,13 +540,22 @@ function Layout({ title, description, children }) {
               background: transparent;
             }
             ::-webkit-scrollbar-thumb {
-              background: #25c3ff;
+              background: var(--highlight-hue);
               border: none;
             }
 
             ::-webkit-scrollbar-track {
               background: #405171;
               border: none;
+            }
+
+             {
+              /* Custom Checkboxes */
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+              display: none;
             }
           `}
         </style>

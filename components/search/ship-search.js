@@ -77,13 +77,15 @@ export default function ShipSearch(props) {
                 margin: 0;
                 padding: 0;
                 list-style: none;
-                background: var(--primary-hue);
+                background: var(--dark-bg);
                 padding: var(--outer-padding);
+                color: var(--highlight-hue);
               }
 
               content {
                 overflow-y: scroll;
                 -webkit-overflow-scrolling: touch;
+                background: var(--primary-hue);
               }
               li.ais-RefinementList-item {
                 height: 2rem;
@@ -95,26 +97,42 @@ export default function ShipSearch(props) {
                 padding: 0 0.5rem;
                 width: 100%;
                 margin-top: 1rem;
+                color: var(--highlight-hue);
+              }
+
+              .ais-RefinementList-label {
+                width: 100%;
+                position: relative;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                cursor: pointer;
               }
 
               .ais-RefinementList-labelText {
                 font-size: var(--text-small);
-                color: var(--white);
+              }
+
+              li.ais-RefinementList-item--selected {
+                color: var(--glow);
+                font-weight: 700;
               }
 
               .ais-RefinementList-count {
-                font-size: 60%;
+                font-size: 50%;
                 width: 1.1rem;
+                position: absolute;
+                right: 0;
+                top: 0.4rem;
                 height: 1.1rem;
                 padding-top: 1px;
                 display: inline-flex;
                 place-content: center center;
                 place-items: center;
                 vertical-align: middle;
-                border-radius: var(--border-radius);
                 line-height: unset;
-                background: var(--dark-bg);
                 color: var(--glow);
+                place-self: flex-start;
               }
             `}
           </style>
@@ -123,11 +141,9 @@ export default function ShipSearch(props) {
           </footer>
         </menu>
         <content>
-          <ScrollTo>
-            <div>
-              <InfiniteHits />
-            </div>
-          </ScrollTo>
+          <div>
+            <InfiniteHits />
+          </div>
         </content>
       </section>
     </InstantSearch>
