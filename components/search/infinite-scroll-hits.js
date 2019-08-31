@@ -65,18 +65,35 @@ function InfiniteHits(props) {
           h3,
           h4 {
             margin: 0;
+            line-height: 1;
+          }
+
+          h4 {
+            font-size: var(--text-large);
           }
 
           li {
             display: flex;
             flex-direction: column;
-            margin: 2rem 0;
+            margin-bottom: 2rem;
             border: 1px solid var(--highlight-hue);
             border-radius: var(--border-radius);
             overflow: hidden;
             background: var(--dark-bg);
             color: var(--highlight-hue);
             box-shadow: var(--box-shadow);
+          }
+
+          li:nth-last-child(2) {
+            margin-bottom: 0;
+          }
+
+          li.ais-InfiniteHits-sentinel {
+            border: none;
+            background: transparent;
+            color: transparent;
+            box-shadow: none;
+            margin: 0;
           }
 
           .ship-name,
