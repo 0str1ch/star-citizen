@@ -67,6 +67,8 @@ function InfiniteHits(props) {
 
           img {
             object-fit: cover;
+            width: auto;
+            height: 20rem;
           }
 
           .ship-info {

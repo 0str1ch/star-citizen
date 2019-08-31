@@ -66,7 +66,10 @@ export default function ShipSearch(props) {
 
               section#application {
                 display: grid;
-                grid-template-columns: minmax(18rem, auto) auto;
+                grid-template-columns: minmax(18rem, 1fr) minmax(
+                    calc(100% - 18rem),
+                    1fr
+                  );
                 overflow: hidden;
                 height: calc(100vh - 2rem);
               }
