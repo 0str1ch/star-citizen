@@ -72,6 +72,8 @@ export default function ShipSearch(props) {
               }
 
               menu {
+                overflow-y: scroll;
+                overflow-x: hidden;
                 margin: 0;
                 padding: 0;
                 list-style: none;
@@ -82,6 +84,17 @@ export default function ShipSearch(props) {
               content {
                 overflow-y: scroll;
                 -webkit-overflow-scrolling: touch;
+              }
+              li.ais-RefinementList-item {
+                height: 2rem;
+                border: 1px solid var(--highlight-hue);
+                border-radius: var(--border-radius);
+                background: var(--dark-grey);
+                display: flex;
+                place-content: flex-start;
+                padding: 0 0.5rem;
+                width: 100%;
+                margin-top: 1rem;
               }
 
               .ais-RefinementList-labelText {

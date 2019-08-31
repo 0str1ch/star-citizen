@@ -510,6 +510,44 @@ function Layout({ title, description, children }) {
               color: inherit;
               box-sizing: border-box;
             }
+
+             {
+              /* Custom Scroll bars */
+            }
+            ::-webkit-scrollbar {
+              width: 6px;
+              height: 5px;
+            }
+
+            ::-webkit-scrollbar-button {
+              width: 0;
+              height: 0;
+            }
+
+            ::-webkit-scrollbar-thumb {
+              background: #929599;
+              border: none;
+              border-radius: 50px;
+            }
+
+            ::-webkit-scrollbar-track {
+              background: #ebecf0;
+              border: none;
+              border-radius: 0;
+            }
+
+            ::-webkit-scrollbar-corner {
+              background: transparent;
+            }
+            ::-webkit-scrollbar-thumb {
+              background: #25c3ff;
+              border: none;
+            }
+
+            ::-webkit-scrollbar-track {
+              background: #405171;
+              border: none;
+            }
           `}
         </style>
       </main>
