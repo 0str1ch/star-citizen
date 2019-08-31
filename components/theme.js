@@ -7,7 +7,7 @@ export default () => (
           --primary-hue: rgb(28, 38, 54);
           --dark-bg: #0b101a;
           --medium-blue: #1c2838;
-          --highlight-hue: rgb(139, 223, 255);
+          --highlight-hue: #8bdfff;
           --glow: #da9e00;
           --grey: rgb(43, 47, 49);
           --dark-grey: rgb(32, 36, 39);
@@ -32,6 +32,11 @@ export default () => (
           --border: 2px solid #222;
           --box-shadow: 0 5px 15px 0 rgba(74, 40, 101, 0.15),
             0 2px 4px 0 rgba(149, 132, 162, 0.2);
+
+          --box-shadow-blue: 0px 0px 3px 0px rgba(139, 223, 255, 0.8),
+            1px 1px 20px -8px rgba(139, 223, 255, 0.23);
+          --box-shadow-glow: 0px 0px 3px 0px rgba(218, 158, 0, 0.8),
+            1px 1px 20px -8px rgba(218, 158, 0, 0.7);
 
           /** Typography */
           --header-font: "Orbitron", Arial, "Helvetica Neue", Helvetica,

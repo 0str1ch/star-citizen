@@ -98,12 +98,14 @@ export default function ShipSearch(props) {
                 width: 100%;
                 margin-top: 1rem;
                 color: var(--highlight-hue);
+                box-shadow: var(--box-shadow-blue);
               }
 
               li.ais-RefinementList-item--selected {
                 color: var(--glow);
                 font-weight: 700;
                 border: 1px solid var(--glow);
+                box-shadow: var(--box-shadow-glow);
               }
 
               .ais-RefinementList-label {

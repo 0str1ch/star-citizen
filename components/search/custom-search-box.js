@@ -39,6 +39,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
             height: 2rem;
             line-height: 2rem;
             padding: 0 0.5rem;
+            box-shadow: var(--box-shadow-blue);
           }
 
           form.searchbox input:focus {

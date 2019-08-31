@@ -121,7 +121,7 @@ function InfiniteHits(props) {
             overflow: hidden;
             background: var(--dark-bg);
             color: var(--highlight-hue);
-            box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow-blue);
             cursor: pointer;
             min-height: 10rem;
           }
@@ -160,6 +160,7 @@ function InfiniteHits(props) {
           opacity: 0.5;
           transition: opacity ease-in 0.1s;
           cursor: default;
+          box-shadow: var(--box-shadow-blue);
         }
 
         li:hover span.ship-role {
