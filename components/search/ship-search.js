@@ -78,7 +78,7 @@ export default function ShipSearch(props) {
                 padding: 0;
                 list-style: none;
                 background: var(--dark-bg);
-                padding: var(--outer-padding);
+                padding: var(--inner-padding);
                 color: var(--highlight-hue);
               }
 

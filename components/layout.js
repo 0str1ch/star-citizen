@@ -428,60 +428,6 @@ function Layout({ title, description, children }) {
               transform: translateY(1rem);
             }
 
-            input:focus:not([type]),
-            input:focus[type="color"],
-            input:focus[type="date"],
-            input:focus[type="datetime-local"],
-            input:focus[type="datetime"],
-            input:focus[type="email"],
-            input:focus[type="month"],
-            input:focus[type="number"],
-            input:focus[type="password"],
-            input:focus[type="search"],
-            input:focus[type="tel"],
-            input:focus[type="text"],
-            input:focus[type="time"],
-            input:focus[type="url"],
-            input:focus[type="week"],
-            select:focus,
-            textarea:focus {
-              border-color: var(--hue-1);
-              background: #fff;
-              box-shadow: 0 0 2px var(--glow);
-              color: var(--primary-text);
-              z-index: 1;
-              outline: none;
-            }
-
-            input:not([type]),
-            input[type="color"],
-            input[type="date"],
-            input[type="datetime-local"],
-            input[type="datetime"],
-            input[type="email"],
-            input[type="month"],
-            input[type="number"],
-            input[type="password"],
-            input[type="search"],
-            input[type="tel"],
-            input[type="text"],
-            input[type="time"],
-            input[type="url"],
-            input[type="week"],
-            select,
-            textarea {
-              height: 3em;
-              max-width: 100%;
-              padding: 0 1em;
-              border: 1px solid var(--hint);
-              background: #fff;
-              color: var(--primary-hue);
-              transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-              border-radius: var(--border-radius);
-              width: 100%;
-              position: relative;
-            }
-
             input:not([type]),
             input[type="datetime"],
             input[type="email"],

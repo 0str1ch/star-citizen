@@ -33,6 +33,23 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
           }
 
           form.searchbox input {
+            position: relative;
+            background: var(--primary-hue);
+            color: var(--highlight-hue);
+            border: 1px solid currentColor;
+            border-radius: var(--border-radius);
+            width: 100%;
+            height: 2rem;
+            line-height: 2rem;
+            padding: 0 0.5rem;
+          }
+
+          form.searchbox input:focus {
+            background: var(--primary-hue);
+            color: var(--highlight-hue);
+            border: 1px solid var(--glow);
+            outline: none;
+            box-shadow: 0 0 2px var(--glow);
           }
 
           form.searchbox button {
