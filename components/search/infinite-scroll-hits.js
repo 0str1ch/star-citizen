@@ -29,12 +29,16 @@ function InfiniteHits(props) {
         {hits.map(hit => (
           <li key={hit.objectID}>
             <img src={hit.media} alt={hit.name} />
-            <Highlight attribute="name" hit={hit} className="ship-name" />
-            <Highlight
-              attribute="manufacturer"
-              hit={hit}
-              className="ship-manufacturer"
-            />
+            <h3>
+              <Highlight attribute="name" hit={hit} className="ship-name" />
+            </h3>
+            <h4>
+              <Highlight
+                attribute="manufacturer"
+                hit={hit}
+                className="ship-manufacturer"
+              />
+            </h4>
             <Highlight attribute="focus" hit={hit} className="ship-role" />
           </li>
         ))}
@@ -56,6 +60,11 @@ function InfiniteHits(props) {
             width: 100%;
             margin: 0;
             padding: 0;
+          }
+
+          h3,
+          h4 {
+            margin: 0;
           }
 
           li {
