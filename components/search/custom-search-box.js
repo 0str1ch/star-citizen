@@ -1,4 +1,5 @@
 import { connectSearchBox } from "react-instantsearch-dom";
+import UIButton from "../ui-button";
 
 function showStalled() {
   return "Search is booting up...";
@@ -15,13 +16,9 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
         value={currentRefinement}
         onChange={event => refine(event.currentTarget.value)}
       />
-      <button
-        onClick={() => refine("")}
-        type="submit"
-        className="reset-button button"
-      >
-        Reset search
-      </button>
+      <UIButton onClick={() => refine("")} type="submit">
+        Reset Search
+      </UIButton>
 
       <style jsx global>
         {`

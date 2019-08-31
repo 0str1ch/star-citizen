@@ -100,6 +100,12 @@ export default function ShipSearch(props) {
                 color: var(--highlight-hue);
               }
 
+              li.ais-RefinementList-item--selected {
+                color: var(--glow);
+                font-weight: 700;
+                border: 1px solid var(--glow);
+              }
+
               .ais-RefinementList-label {
                 width: 100%;
                 position: relative;
@@ -111,11 +117,6 @@ export default function ShipSearch(props) {
 
               .ais-RefinementList-labelText {
                 font-size: var(--text-small);
-              }
-
-              li.ais-RefinementList-item--selected {
-                color: var(--glow);
-                font-weight: 700;
               }
 
               .ais-RefinementList-count {

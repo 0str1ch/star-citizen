@@ -11,6 +11,7 @@ export default class StarCitizenSearchDB extends Document {
     return (
       <Html lang="en-US">
         <Head>
+          <meta charSet="UTF-8" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
@@ -52,6 +53,38 @@ export default class StarCitizenSearchDB extends Document {
             content="black-translucent"
           />
           <meta name="msapplication-starturl" content="/" />
+          <link
+            rel="preload"
+            href="/static/fonts/orbitron.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <style
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+                      @font-face {
+                        font-family: 'Orbitron';
+                        font-display: swap;
+                        src: url('/static/fonts/orbitron.woff2')
+                          format('woff2');
+                        font-weight: normal;
+                        font-style: normal;
+                        unicode-range: U+000-5FF;
+                      }
+                      @font-face {
+                        font-family: 'Orbitron';
+                        font-display: swap;
+                        src: url('/static/fonts/orbitron.woff')
+                          format('woff');
+                        font-weight: normal;
+                        font-style: normal;
+                        unicode-range: U+000-5FF;
+                      }
+          `
+            }}
+          />
         </Head>
         <body>
           <Main />

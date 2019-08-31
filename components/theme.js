@@ -17,7 +17,8 @@ export default () => (
 
           /** Gradients */
           --light-bg: linear-gradient(to right, #f5f5fa, #fff, #f5f5fa);
-          --gradient: linear-gradient(var(--hue-1), var(--hue-4)) no-repeat;
+          --gradient: linear-gradient(var(--primary-hue), var(--medium-blue))
+            no-repeat;
           --light-gradient: linear-gradient(#fff, #e4e4e9) no-repeat;
           --card-shadow: 0 5px 15px 0 rgba(74, 40, 101, 0.15),
             0 2px 4px 0 rgba(149, 132, 162, 0.2);
@@ -33,8 +34,9 @@ export default () => (
             0 2px 4px 0 rgba(149, 132, 162, 0.2);
 
           /** Typography */
-          --font: "NeueMontreal", Arial, "Helvetica Neue", Helvetica, sans-serif;
-          --header-font: var(--font);
+          --header-font: "Orbitron", Arial, "Helvetica Neue", Helvetica,
+            sans-serif;
+          --font: Arial, "Helvetica Neue", Helvetica, sans-serif;
           --monospace: "IBM Plex Mono", Consolas, "Liberation Mono", Menlo,
             Courier, monospace;
         }

@@ -84,7 +84,6 @@ function Layout({ title, description, children }) {
               font-weight: 400;
               direction: ltr;
               overflow-x: hidden;
-              font-feature-settings: "ss02", "ss03", "ss06";
               font-variant-ligatures: common-ligatures;
               text-rendering: optimizeLegibility;
               /* overflow-x: hidden; */

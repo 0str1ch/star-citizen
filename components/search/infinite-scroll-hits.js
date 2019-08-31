@@ -29,17 +29,19 @@ function InfiniteHits(props) {
         {hits.map(hit => (
           <li key={hit.objectID}>
             <img src={hit.media} alt={hit.name} />
-            <h3>
-              <Highlight attribute="name" hit={hit} className="ship-name" />
-            </h3>
-            <h4>
-              <Highlight
-                attribute="manufacturer"
-                hit={hit}
-                className="ship-manufacturer"
-              />
-            </h4>
             <Highlight attribute="focus" hit={hit} className="ship-role" />
+            <div className="ship-info">
+              <h3>
+                <Highlight attribute="name" hit={hit} className="ship-name" />
+              </h3>
+              <h4>
+                <Highlight
+                  attribute="manufacturer"
+                  hit={hit}
+                  className="ship-manufacturer"
+                />
+              </h4>
+            </div>
           </li>
         ))}
         <li
@@ -62,10 +64,43 @@ function InfiniteHits(props) {
             padding: 0;
           }
 
+          .ship-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 7rem;
+            display: flex;
+            flex-direction: column;
+            place-items: start;
+            place-content: center;
+            padding: 0 var(--inner-padding);
+          }
+
+          .ship-info::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(
+                45deg,
+                rgba(28, 38, 54, 1),
+                rgba(28, 40, 56, 0)
+              )
+              no-repeat;
+            height: 7rem;
+            opacity: 0.8;
+            z-index: 0;
+            transition: opacity ease-in 0.1s;
+          }
+
           h3,
           h4 {
             margin: 0;
             line-height: 1;
+            font-family: var(--header-font);
+            z-index: 1;
           }
 
           h4 {
@@ -73,6 +108,7 @@ function InfiniteHits(props) {
           }
 
           li {
+            position: relative;
             display: flex;
             flex-direction: column;
             margin-bottom: var(--outer-padding);
@@ -82,6 +118,11 @@ function InfiniteHits(props) {
             background: var(--dark-bg);
             color: var(--highlight-hue);
             box-shadow: var(--box-shadow);
+            cursor: pointer;
+          }
+
+          li:hover div.ship-info::before {
+            opacity: 1;
           }
 
           li:nth-last-child(2) {
@@ -95,13 +136,31 @@ function InfiniteHits(props) {
             box-shadow: none;
             margin: 0;
           }
-
-          .ship-name,
-          .ship-manufacturer,
-          .ship-role {
-          }
         `}
       </style>
+      <style jsx global>{`
+        span.ship-role {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 2rem;
+          line-height: 2rem;
+          border: 1px solid var(--highlight-hue);
+          border-radius: var(--border-radius);
+          background: var(--dark-grey);
+          overflow: hidden;
+          font-size: var(--text-small);
+          padding: 0 0.5rem;
+          margin: var(--inner-padding);
+          opacity: 0.5;
+          transition: opacity ease-in 0.1s;
+          cursor: default;
+        }
+
+        li:hover span.ship-role {
+          opacity: 1;
+        }
+      `}</style>
     </div>
   );
 }
