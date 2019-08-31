@@ -15,16 +15,18 @@ export default function Header() {
         {`
           header {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             margin: 0;
-            padding: 2rem;
+            width: 100%;
+            height: 2rem;
+            padding: 0 var(--outer-padding);
             text-align: center;
             background: var(--dark-bg);
             place-items: center center;
           }
 
           p {
-            margin-top: 0.5rem;
+            margin-left: 1rem;
             font-size: var(--text-small);
             color: var(--glow);
           }
@@ -33,8 +35,9 @@ export default function Header() {
       <style jsx global>
         {`
           header div.logo-wrapper svg {
-            max-width: 15rem;
-            width: 15rem;
+            display: block;
+            max-width: 4rem;
+            width: 4rem;
           }
         `}
       </style>

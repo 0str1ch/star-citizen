@@ -423,15 +423,6 @@ function Layout({ title, description, children }) {
               position: relative;
             }
 
-            label {
-              background-color: #fff;
-              color: var(--primary-hue);
-              font-size: 1em;
-              opacity: 1;
-              transform: translateY(0);
-              transition: all 0.2s ease-out;
-            }
-
             input:placeholder-shown + label {
               opacity: 0;
               transform: translateY(1rem);
@@ -504,6 +495,10 @@ function Layout({ title, description, children }) {
               -webkit-appearance: none;
               -moz-appearance: none;
               appearance: none;
+            }
+
+            input[type="checkbox" i] {
+              background-color: transparent;
             }
 
             input,

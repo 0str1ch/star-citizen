@@ -24,11 +24,8 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
       <style jsx global>
         {`
           div.search-wrapper {
-            position: sticky;
-            top: 0;
+            font-size: var(--text-small);
             z-index: 20;
-            background: var(--primary-hue);
-            padding: var(--outer-padding);
           }
           form.searchbox {
           }

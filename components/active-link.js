@@ -13,6 +13,8 @@ export default function ActiveLink({ children, href }) {
             a {
               cursor: pointer;
               position: relative;
+              line-height: 1;
+              vertical-align: top;
               color: ${router.pathname === href
                 ? "var(--hue-1)"
                 : "var(--primary-text)"};

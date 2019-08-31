@@ -1,4 +1,3 @@
-import { createInstantSearch } from 'react-instantsearch-dom/server'
-
+import { createInstantSearch } from "react-instantsearch-dom/server";
 
 export const { InstantSearch, findResultsState } = createInstantSearch();

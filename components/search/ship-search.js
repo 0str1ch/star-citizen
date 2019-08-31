@@ -36,12 +36,11 @@ export default function ShipSearch(props) {
       createURL={props.createURL}
       stalledSearchDelay={500}
     >
-      <Configure hitsPerPage={5} />
-      <CustomSearchBox />
-      <content>
+      <section id="application">
         <menu>
+          <Configure hitsPerPage={5} />
+          <CustomSearchBox />
           <Stats />
-          <Pagination />
           <HitsPerPage
             defaultRefinement={5}
             items={[
@@ -65,23 +64,59 @@ export default function ShipSearch(props) {
                 list-style: none;
               }
 
+              section#application {
+                display: grid;
+                grid-template-columns: 20% 1fr;
+                overflow: hidden;
+                height: calc(100vh - 2rem);
+              }
+
               menu {
                 margin: 0;
                 padding: 0;
                 list-style: none;
+                background: var(--primary-hue);
+                padding: var(--outer-padding);
+              }
+
+              content {
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+              }
+
+              .ais-RefinementList-labelText {
+                font-size: var(--text-small);
+                color: var(--white);
+              }
+
+              .ais-RefinementList-count {
+                font-size: 60%;
+                width: 1.1rem;
+                height: 1.1rem;
+                padding-top: 1px;
+                display: inline-flex;
+                place-content: center center;
+                place-items: center;
+                vertical-align: middle;
+                border-radius: var(--border-radius);
+                line-height: unset;
+                background: var(--dark-bg);
+                color: var(--glow);
               }
             `}
           </style>
+          <footer>
+            <PoweredBy />
+          </footer>
         </menu>
-        <ScrollTo>
-          <div>
-            <InfiniteHits />
-          </div>
-        </ScrollTo>
-      </content>
-      <footer>
-        <PoweredBy />
-      </footer>
+        <content>
+          <ScrollTo>
+            <div>
+              <InfiniteHits />
+            </div>
+          </ScrollTo>
+        </content>
+      </section>
     </InstantSearch>
   );
 }

@@ -2,9 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Router from "next/router";
 import qs from "qs";
-import { Head, findResultsState, ShipSearch } from "../components";
+import { Head, findResultsState, ShipSearch } from "../components/search";
 import Layout from "../components/layout";
-import UIButton from "../components/ui-button";
 
 const updateAfter = 700;
 
@@ -57,18 +56,15 @@ export default class extends React.Component {
   render() {
     return (
       <Layout>
-        <section>
-          <UIButton href="/">Hi there</UIButton>
-          <ShipSearch
-            resultsState={this.props.resultsState}
-            onSearchStateChange={this.onSearchStateChange}
-            searchState={
-              this.state && this.state.searchState
-                ? this.state.searchState
-                : this.props.searchState
-            }
-          />
-        </section>
+        <ShipSearch
+          resultsState={this.props.resultsState}
+          onSearchStateChange={this.onSearchStateChange}
+          searchState={
+            this.state && this.state.searchState
+              ? this.state.searchState
+              : this.props.searchState
+          }
+        />
       </Layout>
     );
   }
