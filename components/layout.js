@@ -242,7 +242,7 @@ function Layout({ title, description, children }) {
               --text-large: 1.333em;
               --text-normal: 1rem;
               --text-small: 0.75em;
-              --text-xsmall: 0.75em;
+              --text-xsmall: 0.666em;
             }
 
             p {

@@ -56,15 +56,16 @@ function InfiniteHits(props) {
             padding: var(--outer-padding);
           }
           ul {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: var(--outer-padding);
             max-width: 100%;
             width: 100%;
             margin: 0;
             padding: 0;
           }
 
-          .img {
+          img {
             object-fit: cover;
           }
 
@@ -73,7 +74,7 @@ function InfiniteHits(props) {
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 7rem;
+            height: 4rem;
             display: flex;
             flex-direction: column;
             place-items: start;
@@ -93,7 +94,7 @@ function InfiniteHits(props) {
                 rgba(28, 40, 56, 0)
               )
               no-repeat;
-            height: 7rem;
+            height: 4rem;
             opacity: 0.8;
             z-index: 0;
             transition: opacity ease-in 0.1s;
@@ -107,15 +108,18 @@ function InfiniteHits(props) {
             z-index: 1;
           }
 
-          h4 {
+          h3 {
             font-size: var(--text-large);
+          }
+
+          h4 {
+            font-size: var(--text-small);
           }
 
           li {
             position: relative;
             display: flex;
             flex-direction: column;
-            margin-bottom: var(--outer-padding);
             border: 1px solid var(--highlight-hue);
             border-radius: var(--border-radius);
             overflow: hidden;
@@ -148,13 +152,13 @@ function InfiniteHits(props) {
           position: absolute;
           top: 0;
           right: 0;
-          height: 2rem;
-          line-height: 2rem;
+          height: 1.333rem;
+          line-height: 1.333rem;
           border: 1px solid var(--highlight-hue);
           border-radius: var(--border-radius);
           background: var(--dark-grey);
           overflow: hidden;
-          font-size: var(--text-small);
+          font-size: var(--text-xsmall);
           padding: 0 0.5rem;
           margin: var(--inner-padding);
           opacity: 0.5;
