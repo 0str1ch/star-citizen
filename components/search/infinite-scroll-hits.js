@@ -119,6 +119,7 @@ function InfiniteHits(props) {
             color: var(--highlight-hue);
             box-shadow: var(--box-shadow);
             cursor: pointer;
+            min-height: 15rem;
           }
 
           li:hover div.ship-info::before {
