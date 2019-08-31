@@ -64,6 +64,10 @@ function InfiniteHits(props) {
             padding: 0;
           }
 
+          .img {
+            object-fit: cover;
+          }
+
           .ship-info {
             position: absolute;
             bottom: 0;
@@ -119,7 +123,7 @@ function InfiniteHits(props) {
             color: var(--highlight-hue);
             box-shadow: var(--box-shadow);
             cursor: pointer;
-            min-height: 15rem;
+            min-height: 10rem;
           }
 
           li:hover div.ship-info::before {
