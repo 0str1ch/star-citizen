@@ -22,6 +22,7 @@ import CustomSearchBox from "./custom-search-box";
 import UIButton from "../ui-button";
 import CustomClearRefinements from "./custom-clear-refinements";
 import CustomAutocomplete from "./custom-autocomplete";
+import Accordion from "../accordion";
 
 const searchClient = algoliasearch(
   "LBEZ4EW674",
@@ -53,7 +54,7 @@ export default function ShipSearch(props) {
               { value: 25, label: "Show 25 results" }
             ]}
           />
-          <div className="manufacturer-sort filter">
+          {/* <div className="manufacturer-sort filter">
             <div className="filter-heading">
               <h5>
                 Sort by Manufacturer{" "}
@@ -71,7 +72,14 @@ export default function ShipSearch(props) {
               transformItems={items => orderBy(items, "label", "asc")}
               limit={25}
             />
-          </div>
+          </div> */}
+          <Accordion title="Sort by Manufacturer">
+            <RefinementList
+              attribute="manufacturer"
+              transformItems={items => orderBy(items, "label", "asc")}
+              limit={25}
+            />
+          </Accordion>
           <div className="status-sort filter">
             <div className="filter-heading">
               <h5>
