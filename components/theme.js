@@ -6,6 +6,7 @@ export default () => (
           /** New color scheme **/
           --primary-hue: rgb(28, 38, 54);
           --dark-bg: #0b101a;
+          --light-blue: #213249;
           --medium-blue: #1c2838;
           --highlight-hue: #8bdfff;
           --glow: #da9e00;

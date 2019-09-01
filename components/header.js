@@ -21,7 +21,7 @@ export default function Header() {
             height: 2rem;
             padding: 0 var(--outer-padding);
             text-align: center;
-            background: var(--dark-grey);
+            background: var(--light-blue);
             place-items: center center;
             border-bottom: 2px solid var(--glow);
           }
