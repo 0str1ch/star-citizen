@@ -165,7 +165,10 @@ export default function ShipSearch(props) {
               }
 
               .ais-RefinementList-labelText {
-                font-size: var(--text-small);
+                font-size: var(--text-xsmall);
+                text-transform: uppercase;
+                overflow: hidden;
+                text-overflow: ellipsis;
               }
 
               .ais-RefinementList-count {
