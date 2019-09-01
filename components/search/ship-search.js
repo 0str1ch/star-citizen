@@ -3,17 +3,8 @@ import { orderBy } from "lodash";
 import algoliasearch from "algoliasearch/lite";
 import {
   RefinementList,
-  ScrollTo,
-  SearchBox,
-  Hits,
-  HitsPerPage,
   Configure,
-  Highlight,
-  Pagination,
-  ToggleRefinement,
   CurrentRefinements,
-  ClearRefinements,
-  Stats,
   PoweredBy
 } from "react-instantsearch-dom";
 import { InstantSearch } from "./instantsearch";
@@ -96,7 +87,6 @@ export default function ShipSearch(props) {
             />
           </Accordion>
           <CurrentRefinements clearsQuery />
-          <Stats />
           <style jsx global>
             {`
               .ais-RefinementList-list,

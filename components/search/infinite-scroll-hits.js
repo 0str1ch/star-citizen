@@ -28,26 +28,28 @@ function InfiniteHits(props) {
       <ul className="ais-InfiniteHits-list">
         {hits.map(hit => (
           <li key={hit.objectID}>
-            <img src={hit.media} alt={hit.name} />
-            <span className="ship-role">{hit.focus}</span>
-            <div className="ship-info">
-              <h3>
-                <Highlight
-                  tagName="mark"
-                  attribute="name"
-                  hit={hit}
-                  className="ship-name"
-                />
-              </h3>
-              <h4>
-                <Highlight
-                  tagName="mark"
-                  attribute="manufacturer"
-                  hit={hit}
-                  className="ship-manufacturer"
-                />
-              </h4>
-            </div>
+            <a href={hit.url} target="_blank" rel="noopener noreferrer">
+              <img src={hit.media} alt={hit.name} />
+              <span className="ship-role">{hit.focus}</span>
+              <div className="ship-info">
+                <h3>
+                  <Highlight
+                    tagName="mark"
+                    attribute="name"
+                    hit={hit}
+                    className="ship-name"
+                  />
+                </h3>
+                <h4>
+                  <Highlight
+                    tagName="mark"
+                    attribute="manufacturer"
+                    hit={hit}
+                    className="ship-manufacturer"
+                  />
+                </h4>
+              </div>
+            </a>
           </li>
         ))}
         <li
@@ -119,13 +121,14 @@ function InfiniteHits(props) {
           h3 {
             font-size: var(--text-large);
             text-shadow: var(--text-glow);
+            text-transform: uppercase;
           }
 
           h4 {
             font-size: var(--text-small);
           }
 
-          li {
+          a {
             position: relative;
             display: flex;
             flex-direction: column;

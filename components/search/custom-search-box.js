@@ -1,6 +1,7 @@
 import { connectSearchBox } from "react-instantsearch-dom";
 import UIButton from "../ui-button";
 import CustomClearRefinements from "./custom-clear-refinements";
+import CustomStats from "./custom-stats";
 
 function showStalled() {
   return "Search is booting up...";
@@ -23,6 +24,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
         </UIButton>
         <CustomClearRefinements />
       </div>
+      <CustomStats />
 
       <style jsx>
         {`
@@ -50,6 +52,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
             padding: 0 0.5rem;
             box-shadow: var(--box-shadow-blue);
             font-size: var(--text-small);
+            transition: all 0.1s ease-in-out;
           }
 
           form.searchbox input:focus {

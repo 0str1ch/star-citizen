@@ -7,7 +7,7 @@ export default function Header() {
     <header>
       <div className="logo-wrapper">
         <ActiveLink href="/">
-          <Logo color="var(--white)" />
+          <Logo />
         </ActiveLink>
       </div>
       <p>Browse the Star Citizen™ ship matrix</p>
@@ -19,7 +19,7 @@ export default function Header() {
             margin: 0;
             width: 100%;
             height: 2rem;
-            padding: 0 var(--outer-padding);
+            padding: 0 var(--inner-padding);
             text-align: center;
             background: var(--light-blue);
             place-items: center center;
@@ -37,8 +37,9 @@ export default function Header() {
         {`
           header div.logo-wrapper svg {
             display: block;
-            max-width: 4rem;
-            width: 4rem;
+            max-width: 7rem;
+            width: 7rem;
+            margin-top: 0.15rem;
           }
         `}
       </style>

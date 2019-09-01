@@ -44,7 +44,7 @@ export default () => (
           /** Typography */
           --header-font: "Orbitron", Arial, "Helvetica Neue", Helvetica,
             sans-serif;
-          --font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+          --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
           --monospace: "IBM Plex Mono", Consolas, "Liberation Mono", Menlo,
             Courier, monospace;
         }

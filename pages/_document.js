@@ -88,6 +88,7 @@ export default class StarCitizenSearchDB extends Document {
         </Head>
         <body>
           <Main />
+          <div id="modal" />
           <NextScript />
         </body>
       </Html>

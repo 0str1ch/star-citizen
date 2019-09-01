@@ -75,6 +75,7 @@ const Accordion = ({ title, children, onToggle }) => {
             text-transform: uppercase;
             font-size: var(--text-xsmall);
             line-height: 0.6rem;
+            letter-spacing: 0.05rem;
             margin: 0;
           }
 
