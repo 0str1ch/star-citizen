@@ -47,6 +47,8 @@ const Accordion = ({ title, children, onToggle }) => {
 
           .filter-heading h5 {
             display: flex;
+            font-weight: 400;
+            text-shadow: var(--text-glow);
             padding-right: 0.5rem;
             padding-bottom: 0.5rem;
             padding-left: 0.5rem;

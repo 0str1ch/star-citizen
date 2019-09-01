@@ -39,6 +39,7 @@ export default () => (
           --box-shadow-glow: 0px 0px 3px 0px rgba(218, 158, 0, 0.8),
             1px 1px 20px -8px rgba(218, 158, 0, 0.7);
           --text-glow: 0 0 4px rgba(139, 223, 255, 0.7);
+          --text-glow-highlight: 0 0 4px rgba(218, 158, 0, 0.8);
 
           /** Typography */
           --header-font: "Orbitron", Arial, "Helvetica Neue", Helvetica,

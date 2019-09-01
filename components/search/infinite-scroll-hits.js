@@ -29,13 +29,24 @@ function InfiniteHits(props) {
         {hits.map(hit => (
           <li key={hit.objectID}>
             <img src={hit.media} alt={hit.name} />
-            <Highlight attribute="focus" hit={hit} className="ship-role" />
+            <Highlight
+              tagName="mark"
+              attribute="focus"
+              hit={hit}
+              className="ship-role"
+            />
             <div className="ship-info">
               <h3>
-                <Highlight attribute="name" hit={hit} className="ship-name" />
+                <Highlight
+                  tagName="mark"
+                  attribute="name"
+                  hit={hit}
+                  className="ship-name"
+                />
               </h3>
               <h4>
                 <Highlight
+                  tagName="mark"
                   attribute="manufacturer"
                   hit={hit}
                   className="ship-manufacturer"
@@ -172,6 +183,12 @@ function InfiniteHits(props) {
 
         li:hover span.ship-role {
           opacity: 1;
+        }
+
+        mark {
+          background-color: transparent;
+          color: var(--glow);
+          text-shadow: var(--text-glow-highlight);
         }
       `}</style>
     </div>

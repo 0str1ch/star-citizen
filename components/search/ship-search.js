@@ -45,15 +45,14 @@ export default function ShipSearch(props) {
           <Configure hitsPerPage={5} />
           <CustomSearchBox />
           <CustomClearRefinements />
-          <Stats />
-          <HitsPerPage
+          {/* <HitsPerPage
             defaultRefinement={5}
             items={[
               { value: 5, label: "Show 5 results" },
               { value: 10, label: "Show 10 results" },
               { value: 25, label: "Show 25 results" }
             ]}
-          />
+          /> */}
           {/* <div className="manufacturer-sort filter">
             <div className="filter-heading">
               <h5>
@@ -87,7 +86,15 @@ export default function ShipSearch(props) {
               limit={5}
             />
           </Accordion>
+          <Accordion title="Sort by Role">
+            <RefinementList
+              attribute="focus"
+              transformItems={items => orderBy(items, "label", "asc")}
+              limit={30}
+            />
+          </Accordion>
           <CurrentRefinements clearsQuery />
+          <Stats />
           <style jsx global>
             {`
               .ais-RefinementList-list,
