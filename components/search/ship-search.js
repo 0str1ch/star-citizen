@@ -44,7 +44,6 @@ export default function ShipSearch(props) {
         <menu>
           <Configure hitsPerPage={5} />
           <CustomSearchBox />
-          <CustomClearRefinements />
           {/* <HitsPerPage
             defaultRefinement={5}
             items={[
@@ -94,6 +93,7 @@ export default function ShipSearch(props) {
             />
           </Accordion>
           <CurrentRefinements clearsQuery />
+          <CustomClearRefinements />
           <Stats />
           <style jsx global>
             {`
@@ -120,9 +120,12 @@ export default function ShipSearch(props) {
                 padding: 0;
                 list-style: none;
                 background: var(--dark-bg);
-                padding: var(--inner-padding);
                 color: var(--highlight-hue);
                 width: 100%;
+              }
+
+              menu .menu-panel {
+                padding: var(--inner-padding);
               }
 
               content {

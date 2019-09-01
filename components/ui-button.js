@@ -24,6 +24,8 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
             line-height: 1.5rem;
             padding: 0 0.5rem;
             font-size: var(--text-small);
+            margin: 0.5rem 0;
+            box-shadow: var(--box-shadow-blue);
           }
         `}
       </style>

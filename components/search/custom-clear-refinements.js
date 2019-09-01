@@ -2,13 +2,23 @@ import { connectCurrentRefinements } from "react-instantsearch-dom";
 import UIButton from "../ui-button";
 
 const ClearRefinements = ({ items, refine }) => (
-  <UIButton
-    onClick={() => refine(items)}
-    disabled={!items.length}
-    type="submit"
-  >
-    Clear All Refinements
-  </UIButton>
+  <div>
+    <UIButton
+      onClick={() => refine(items)}
+      disabled={!items.length}
+      type="submit"
+    >
+      Clear All Refinements
+    </UIButton>
+    <style jsx>
+      {`
+        div {
+          display: flex;
+          place-content: center center;
+        }
+      `}
+    </style>
+  </div>
 );
 
 const CustomClearRefinements = connectCurrentRefinements(ClearRefinements);

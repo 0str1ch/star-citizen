@@ -23,7 +23,7 @@ const Accordion = ({ title, children, onToggle }) => {
           </svg>
         </h5>
       </div>
-      {visibility ? <>{children}</> : null}
+      {visibility ? <div className="menu-panel">{children}</div> : null}
       <style jsx>
         {`
           .filter-heading {
@@ -33,6 +33,7 @@ const Accordion = ({ title, children, onToggle }) => {
             justify-content: flex-end;
             align-items: flex-end;
             cursor: pointer;
+            overflow-x: hidden;
           }
 
           .filter-heading:before {

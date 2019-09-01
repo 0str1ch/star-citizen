@@ -7,7 +7,7 @@ function showStalled() {
 
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
   <div className="search-wrapper">
-    <form noValidate action="" role="search" className="searchbox">
+    <form noValidate action="" role="search" className="searchbox menu-panel">
       <input
         type="search"
         placeholder={
@@ -25,8 +25,13 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
           div.search-wrapper {
             font-size: var(--text-small);
             z-index: 20;
+            background: var(--light-blue);
+            border-bottom: 2px solid currentColor;
           }
           form.searchbox {
+            display: flex;
+            flex-wrap: wrap;
+            place-content: flex-end;
           }
 
           form.searchbox input {
@@ -47,7 +52,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
             color: var(--highlight-hue);
             border: 1px solid var(--glow);
             outline: none;
-            box-shadow: 0 0 2px var(--glow);
+            box-shadow: var(--box-shadow-glow);
           }
 
           form.searchbox button {
