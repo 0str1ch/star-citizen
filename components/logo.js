@@ -13,7 +13,7 @@ function Logo({ color }) {
           filter: drop-shadow(var(--text-glow));
           font-weight: 700;
 
-          fill: #fff;
+          fill: #c2eeff;
           text-decoration: none;
           text-transform: uppercase;
           letter-spacing: 10px;
