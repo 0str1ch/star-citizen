@@ -79,6 +79,12 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
 
             a.ui-button:disabled {
               opacity: 0.5;
+              cursor: default;
+            }
+
+            a.ui-button:disabled:hover {
+              box-shadow: var(--box-shadow-blue);
+              border: 1px solid var(--highlight-hue);
             }
           `}
         </style>
