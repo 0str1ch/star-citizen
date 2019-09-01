@@ -236,13 +236,13 @@ function Layout({ title, description, children }) {
             /** Typography Sizes**/
             :root {
               --h1: 4.209rem;
-              --h2: 3.157em;
-              --h3: 2.369em;
-              --h4: 1.777em;
-              --text-large: 1.333em;
+              --h2: 3.157rem;
+              --h3: 2.369rem;
+              --h4: 1.777rem;
+              --text-large: 1.333rem;
               --text-normal: 1rem;
-              --text-small: 0.75em;
-              --text-xsmall: 0.666em;
+              --text-small: 0.75rem;
+              --text-xsmall: 0.666rem;
             }
 
             p {

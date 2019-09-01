@@ -19,6 +19,9 @@ import {
 import { InstantSearch } from "./instantsearch";
 import InfiniteHits from "./infinite-scroll-hits";
 import CustomSearchBox from "./custom-search-box";
+import UIButton from "../ui-button";
+import CustomClearRefinements from "./custom-clear-refinements";
+import CustomAutocomplete from "./custom-autocomplete";
 
 const searchClient = algoliasearch(
   "LBEZ4EW674",
@@ -55,7 +58,7 @@ export default function ShipSearch(props) {
             showMore
           />
           <CurrentRefinements clearsQuery />
-          <ClearRefinements />
+          <CustomClearRefinements />
           <style jsx global>
             {`
               .ais-RefinementList-list,

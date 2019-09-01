@@ -1,10 +1,15 @@
 import React from "react";
 import Link from "next/link";
 
-function UIButton({ link, href, theme, onClick, type, children }) {
+function UIButton({ link, href, theme, onClick, type, disabled, children }) {
   return !link ? (
     // eslint-disable-next-line react/button-has-type
-    <button type={type || "button"} className="ui-button" onClick={onClick}>
+    <button
+      type={type || "button"}
+      className="ui-button"
+      onClick={onClick}
+      disabled={disabled}
+    >
       {children}
       <style jsx>
         {`
