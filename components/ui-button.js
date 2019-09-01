@@ -9,6 +9,7 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
       className="ui-button"
       onClick={onClick}
       disabled={disabled}
+      tabIndex={0}
     >
       {children}
       <style jsx>
@@ -44,6 +45,11 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
           button.ui-button:disabled:hover {
             box-shadow: var(--box-shadow-blue);
             border: 1px solid var(--highlight-hue);
+          }
+
+          button.ui-button:focus {
+            outline: 0;
+            border: 1px solid var(--glow);
           }
         `}
       </style>
