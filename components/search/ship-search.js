@@ -55,7 +55,7 @@ export default function ShipSearch(props) {
           <RefinementList
             attribute="manufacturer"
             transformItems={items => orderBy(items, "label", "asc")}
-            showMore
+            limit={25}
           />
           <CurrentRefinements clearsQuery />
           <CustomClearRefinements />
