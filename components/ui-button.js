@@ -29,6 +29,7 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
             margin: 0.5rem 0;
             box-shadow: var(--box-shadow-blue);
             transition: all 0.1s ease-in-out;
+            white-space: nowrap;
           }
 
           .ui-button:hover {
@@ -59,6 +60,7 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
               margin: 0.5rem 0;
               box-shadow: var(--box-shadow-blue);
               transition: all 0.1s ease-in-out;
+              white-space: nowrap;
             }
 
             .ui-button:hover {

@@ -8,7 +8,7 @@ const ClearRefinements = ({ items, refine }) => (
       disabled={!items.length}
       type="submit"
     >
-      Clear All Refinements
+      Clear Filters
     </UIButton>
     <style jsx>
       {`
