@@ -92,6 +92,11 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
               box-shadow: var(--box-shadow-blue);
               border: 1px solid var(--highlight-hue);
             }
+
+            a.ui-button:focus {
+              outline: 0;
+              border: 1px solid var(--glow);
+            }
           `}
         </style>
       </a>
