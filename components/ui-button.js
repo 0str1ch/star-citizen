@@ -14,6 +14,8 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
       <style jsx>
         {`
           button.ui-button {
+            width: 100%;
+            max-width: 300px;
             cursor: pointer;
             position: relative;
             background: var(--primary-hue);

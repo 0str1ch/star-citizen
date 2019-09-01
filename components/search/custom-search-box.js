@@ -24,10 +24,9 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
         <CustomClearRefinements />
       </div>
 
-      <style jsx global>
+      <style jsx>
         {`
           div.search-wrapper {
-            font-size: var(--text-small);
             z-index: 20;
             background: var(--light-blue);
             border-bottom: 2px solid currentColor;
@@ -55,6 +54,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
             line-height: 2rem;
             padding: 0 0.5rem;
             box-shadow: var(--box-shadow-blue);
+            font-size: var(--text-small);
           }
 
           form.searchbox input:focus {
@@ -69,6 +69,11 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
           }
         `}
       </style>
+      <style jsx global>{`
+        div.button-wrapper button:last-child {
+          margin-left: 0.5rem;
+        }
+      `}</style>
     </form>
   </div>
 );
