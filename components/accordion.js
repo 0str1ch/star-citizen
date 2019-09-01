@@ -10,7 +10,12 @@ const Accordion = ({ title, children, onToggle }) => {
           setVisibility(!visibility);
           if (onToggle) onToggle(!visibility);
         }}
+        onKeyPress={() => {
+          setVisibility(!visibility);
+          if (onToggle) onToggle(!visibility);
+        }}
         role="button"
+        tabIndex={0}
       >
         <h5 className="title">
           {title}{" "}
@@ -26,7 +31,7 @@ const Accordion = ({ title, children, onToggle }) => {
       {visibility ? <div className="menu-panel">{children}</div> : null}
       <style jsx>
         {`
-          .filter-heading {
+          div.filter-heading {
             display: flex;
             margin-top: 10px;
             padding: 5px 0;
@@ -37,7 +42,17 @@ const Accordion = ({ title, children, onToggle }) => {
             margin-top: 1rem;
           }
 
-          .filter-heading:before {
+          div.filter:focus,
+          div.filter-heading:focus {
+            outline: 0;
+            color: var(--glow);
+          }
+
+          div.filter-heading:focus h5 {
+            text-shadow: var(--text-glow-highlight);
+          }
+
+          div.filter-heading:before {
             box-sizing: border-box;
             height: 11px;
             border-top: 1px solid var(--highlight-hue);
@@ -47,7 +62,7 @@ const Accordion = ({ title, children, onToggle }) => {
             flex: 1 1 auto;
           }
 
-          .filter-heading h5 {
+          div.filter-heading h5 {
             display: flex;
             font-weight: 400;
             text-shadow: var(--text-glow);

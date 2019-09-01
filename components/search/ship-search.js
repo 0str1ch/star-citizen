@@ -76,6 +76,7 @@ export default function ShipSearch(props) {
               attribute="manufacturer"
               transformItems={items => orderBy(items, "label", "asc")}
               limit={25}
+              tabIndex={0}
             />
           </Accordion>
           <Accordion title="Sort by Production Status">
@@ -83,6 +84,7 @@ export default function ShipSearch(props) {
               attribute="production_status"
               transformItems={items => orderBy(items, "label", "asc")}
               limit={5}
+              tabIndex={0}
             />
           </Accordion>
           <Accordion title="Sort by Role">
@@ -90,6 +92,7 @@ export default function ShipSearch(props) {
               attribute="focus"
               transformItems={items => orderBy(items, "label", "asc")}
               limit={30}
+              tabIndex={0}
             />
           </Accordion>
           <CurrentRefinements clearsQuery />
