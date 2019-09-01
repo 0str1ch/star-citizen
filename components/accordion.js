@@ -34,6 +34,7 @@ const Accordion = ({ title, children, onToggle }) => {
             align-items: flex-end;
             cursor: pointer;
             overflow-x: hidden;
+            margin-top: 1rem;
           }
 
           .filter-heading:before {

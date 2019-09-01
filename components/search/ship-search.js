@@ -93,7 +93,6 @@ export default function ShipSearch(props) {
             />
           </Accordion>
           <CurrentRefinements clearsQuery />
-          <CustomClearRefinements />
           <Stats />
           <style jsx global>
             {`
@@ -114,6 +113,7 @@ export default function ShipSearch(props) {
               }
 
               menu {
+                position: relative;
                 overflow-y: scroll;
                 overflow-x: hidden;
                 margin: 0;
@@ -145,13 +145,18 @@ export default function ShipSearch(props) {
                 margin-top: 1rem;
                 color: var(--highlight-hue);
                 box-shadow: var(--box-shadow-blue);
+                transition: all 0.1s ease-in-out;
+              }
+
+              li.ais-RefinementList-item--selected,
+              li.ais-RefinementList-item:hover {
+                color: var(--glow);
+                border: 1px solid var(--glow);
+                box-shadow: var(--box-shadow-glow);
               }
 
               li.ais-RefinementList-item--selected {
-                color: var(--glow);
                 font-weight: 700;
-                border: 1px solid var(--glow);
-                box-shadow: var(--box-shadow-glow);
               }
 
               .ais-RefinementList-label {

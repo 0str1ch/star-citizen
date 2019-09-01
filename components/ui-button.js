@@ -20,12 +20,18 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
             color: var(--highlight-hue);
             border: 1px solid currentColor;
             border-radius: var(--border-radius);
-            height: 1.5rem;
-            line-height: 1.5rem;
-            padding: 0 0.5rem;
+            height: 2rem;
+            line-height: 2rem;
+            padding: 0 0.666rem;
             font-size: var(--text-small);
             margin: 0.5rem 0;
             box-shadow: var(--box-shadow-blue);
+            transition: all 0.1s ease-in-out;
+          }
+
+          .ui-button:hover {
+            box-shadow: var(--box-shadow-glow);
+            border: 1px solid var(--glow);
           }
         `}
       </style>
@@ -37,9 +43,25 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
 
         <style jsx>
           {`
-            a {
+            a.ui-button {
               cursor: pointer;
               position: relative;
+              background: var(--primary-hue);
+              color: var(--highlight-hue);
+              border: 1px solid currentColor;
+              border-radius: var(--border-radius);
+              height: 2rem;
+              line-height: 2rem;
+              padding: 0 0.666rem;
+              font-size: var(--text-small);
+              margin: 0.5rem 0;
+              box-shadow: var(--box-shadow-blue);
+              transition: all 0.1s ease-in-out;
+            }
+
+            .ui-button:hover {
+              box-shadow: var(--box-shadow-glow);
+              border: 1px solid var(--glow);
             }
           `}
         </style>

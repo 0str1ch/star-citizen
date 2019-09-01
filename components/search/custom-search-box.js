@@ -1,5 +1,6 @@
 import { connectSearchBox } from "react-instantsearch-dom";
 import UIButton from "../ui-button";
+import CustomClearRefinements from "./custom-clear-refinements";
 
 function showStalled() {
   return "Search is booting up...";
@@ -16,9 +17,12 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
         value={currentRefinement}
         onChange={event => refine(event.currentTarget.value)}
       />
-      <UIButton onClick={() => refine("")} type="submit">
-        Reset Search
-      </UIButton>
+      <div className="button-wrapper">
+        <UIButton onClick={() => refine("")} type="submit">
+          Reset Search
+        </UIButton>
+        <CustomClearRefinements />
+      </div>
 
       <style jsx global>
         {`
@@ -32,6 +36,12 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
             display: flex;
             flex-wrap: wrap;
             place-content: flex-end;
+          }
+
+          div.button-wrapper {
+            width: 100%;
+            display: flex;
+            place-content: space-between;
           }
 
           form.searchbox input {
