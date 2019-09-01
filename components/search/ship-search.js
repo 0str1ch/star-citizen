@@ -80,25 +80,13 @@ export default function ShipSearch(props) {
               limit={25}
             />
           </Accordion>
-          <div className="status-sort filter">
-            <div className="filter-heading">
-              <h5>
-                Sort by Production Status{" "}
-                <svg viewBox="0 0 8 13" className="filter-svg">
-                  <path
-                    d="M.505.495L7.52 6.508.505 12.52z"
-                    fill="currentColor"
-                    fillRule="evenodd"
-                  ></path>
-                </svg>
-              </h5>
-            </div>
+          <Accordion title="Sort by Production Status">
             <RefinementList
               attribute="production_status"
               transformItems={items => orderBy(items, "label", "asc")}
               limit={5}
             />
-          </div>
+          </Accordion>
           <CurrentRefinements clearsQuery />
           <style jsx global>
             {`

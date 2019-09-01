@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Accordion = ({ title, children, onToggle }) => {
-  const [visibility, setVisibility] = useState(true);
+  const [visibility, setVisibility] = useState(false);
   return (
     <div className="manufacturer-sort filter">
       <div
@@ -32,6 +32,7 @@ const Accordion = ({ title, children, onToggle }) => {
             padding: 5px 0;
             justify-content: flex-end;
             align-items: flex-end;
+            cursor: pointer;
           }
 
           .filter-heading:before {
