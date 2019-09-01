@@ -26,11 +26,6 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
 
       <style jsx>
         {`
-          div.search-wrapper {
-            z-index: 20;
-            background: var(--light-blue);
-            border-bottom: 2px solid currentColor;
-          }
           form.searchbox {
             display: flex;
             flex-wrap: wrap;
@@ -70,6 +65,11 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
         `}
       </style>
       <style jsx global>{`
+        div.search-wrapper {
+          z-index: 20;
+          background: var(--light-blue);
+          border-bottom: 2px solid currentColor;
+        }
         div.button-wrapper button:last-child {
           margin-left: 0.5rem;
         }
