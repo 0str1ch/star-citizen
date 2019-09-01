@@ -32,9 +32,18 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
             white-space: nowrap;
           }
 
-          .ui-button:hover {
+          button.ui-button:hover {
             box-shadow: var(--box-shadow-glow);
             border: 1px solid var(--glow);
+          }
+          button.ui-button:disabled {
+            opacity: 0.5;
+            cursor: default;
+          }
+
+          button.ui-button:disabled:hover {
+            box-shadow: var(--box-shadow-blue);
+            border: 1px solid var(--highlight-hue);
           }
         `}
       </style>
@@ -63,9 +72,13 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
               white-space: nowrap;
             }
 
-            .ui-button:hover {
+            a.ui-button:hover {
               box-shadow: var(--box-shadow-glow);
               border: 1px solid var(--glow);
+            }
+
+            a.ui-button:disabled {
+              opacity: 0.5;
             }
           `}
         </style>
