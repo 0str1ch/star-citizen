@@ -191,6 +191,10 @@ function Layout({ title, description, children }) {
               shape-rendering: geometricprecision;
             }
 
+            svg.icon {
+              display: block;
+            }
+
             video {
               height: auto;
               width: 100%;

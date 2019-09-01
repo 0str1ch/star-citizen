@@ -112,6 +112,7 @@ function InfiniteHits(props) {
 
           h3 {
             font-size: var(--text-large);
+            text-shadow: var(--text-glow);
           }
 
           h4 {

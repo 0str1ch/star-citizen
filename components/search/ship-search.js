@@ -43,6 +43,7 @@ export default function ShipSearch(props) {
         <menu>
           <Configure hitsPerPage={5} />
           <CustomSearchBox />
+          <CustomClearRefinements />
           <Stats />
           <HitsPerPage
             defaultRefinement={5}
@@ -52,13 +53,45 @@ export default function ShipSearch(props) {
               { value: 25, label: "Show 25 results" }
             ]}
           />
-          <RefinementList
-            attribute="manufacturer"
-            transformItems={items => orderBy(items, "label", "asc")}
-            limit={25}
-          />
+          <div className="manufacturer-sort filter">
+            <div className="filter-heading">
+              <h5>
+                Sort by Manufacturer{" "}
+                <svg viewBox="0 0 8 13" className="filter-svg">
+                  <path
+                    d="M.505.495L7.52 6.508.505 12.52z"
+                    fill="currentColor"
+                    fillRule="evenodd"
+                  ></path>
+                </svg>
+              </h5>
+            </div>
+            <RefinementList
+              attribute="manufacturer"
+              transformItems={items => orderBy(items, "label", "asc")}
+              limit={25}
+            />
+          </div>
+          <div className="status-sort filter">
+            <div className="filter-heading">
+              <h5>
+                Sort by Production Status{" "}
+                <svg viewBox="0 0 8 13" className="filter-svg">
+                  <path
+                    d="M.505.495L7.52 6.508.505 12.52z"
+                    fill="currentColor"
+                    fillRule="evenodd"
+                  ></path>
+                </svg>
+              </h5>
+            </div>
+            <RefinementList
+              attribute="production_status"
+              transformItems={items => orderBy(items, "label", "asc")}
+              limit={5}
+            />
+          </div>
           <CurrentRefinements clearsQuery />
-          <CustomClearRefinements />
           <style jsx global>
             {`
               .ais-RefinementList-list,
@@ -138,6 +171,45 @@ export default function ShipSearch(props) {
                 vertical-align: middle;
                 line-height: 2rem;
                 color: var(--glow);
+              }
+
+              .filter-heading {
+                display: flex;
+                margin-top: 10px;
+                padding: 5px 0;
+                justify-content: flex-end;
+                align-items: flex-end;
+              }
+
+              .filter-heading:before {
+                box-sizing: border-box;
+                height: 11px;
+                border-top: 1px solid var(--highlight-hue);
+                border-right: 2px solid var(--highlight-hue);
+                content: "";
+                transform: skew(45deg) translateX(-4px);
+                flex: 1 1 auto;
+              }
+
+              .filter-heading h5 {
+                display: flex;
+                padding-right: 0.5rem;
+                padding-bottom: 0.5rem;
+                padding-left: 0.5rem;
+                border-bottom: 1px solid var(--highlight-hue);
+                color: inherit;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: var(--text-xsmall);
+                line-height: 0.6rem;
+                margin: 0;
+              }
+
+              .filter-svg {
+                margin-left: 5px;
+                width: 5px;
+                height: 9px;
+                display: block;
               }
             `}
           </style>
