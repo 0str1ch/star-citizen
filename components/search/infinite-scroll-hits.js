@@ -28,7 +28,12 @@ function InfiniteHits(props) {
       <ul className="ais-InfiniteHits-list">
         {hits.map(hit => (
           <li key={hit.objectID}>
-            <a href={hit.url} target="_blank" rel="noopener noreferrer">
+            <a
+              href={hit.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={0}
+            >
               <img src={hit.media} alt={hit.name} />
               <span className="ship-role">{hit.focus}</span>
               <div className="ship-info">
@@ -76,7 +81,8 @@ function InfiniteHits(props) {
           img {
             object-fit: cover;
             width: auto;
-            height: 20rem;
+            min-height: 20vw;
+            height: 20vw;
           }
 
           .ship-info {
@@ -142,7 +148,12 @@ function InfiniteHits(props) {
             min-height: 10rem;
           }
 
-          li:hover div.ship-info::before {
+          a:hover,
+          a:focus {
+            border: 1px solid var(--glow);
+          }
+
+          a:hover div.ship-info::before {
             opacity: 1;
           }
 
@@ -173,14 +184,8 @@ function InfiniteHits(props) {
           font-size: var(--text-xsmall);
           padding: 0 0.5rem;
           margin: var(--inner-padding);
-          opacity: 0.5;
-          transition: opacity ease-in 0.1s;
           cursor: default;
           box-shadow: var(--box-shadow-blue);
-        }
-
-        li:hover span.ship-role {
-          opacity: 1;
         }
 
         mark {
