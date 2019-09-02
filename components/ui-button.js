@@ -12,7 +12,7 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
       tabIndex={0}
     >
       {children}
-      <style jsx>
+      <style jsx global>
         {`
           button.ui-button {
             width: 100%;
@@ -31,6 +31,7 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
             box-shadow: var(--box-shadow-blue);
             transition: all 0.1s ease-in-out;
             white-space: nowrap;
+            text-align: center;
           }
 
           button.ui-button:hover {
@@ -50,6 +51,50 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
           button.ui-button:focus {
             outline: 0;
             border: 1px solid var(--glow);
+          }
+
+          /** Temporary CSS location for Show More button until I make a custom RefinementList component */
+
+          button.ais-RefinementList-showMore {
+            display: flex;
+            place-items: center;
+            width: 100%;
+            cursor: pointer;
+            position: relative;
+            color: var(--highlight-hue);
+            height: 2rem;
+            line-height: 2rem;
+            font-size: var(--text-xsmall);
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            margin-top: 0.5rem;
+            text-shadow: var(--text-glow);
+          }
+
+          button.ais-RefinementList-showMore::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            display: block;
+            margin-right: 0.5rem;
+            background: currentColor;
+          }
+
+          button.ais-RefinementList-showMore::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            display: block;
+            margin-left: 0.5rem;
+            background: currentColor;
+          }
+
+          button.ais-RefinementList-showMore:hover {
+          }
+
+          button.ais-RefinementList-showMore:focus {
+            outline: 0;
           }
         `}
       </style>
@@ -76,6 +121,7 @@ function UIButton({ link, href, theme, onClick, type, disabled, children }) {
               box-shadow: var(--box-shadow-blue);
               transition: all 0.1s ease-in-out;
               white-space: nowrap;
+              text-align: center;
             }
 
             a.ui-button:hover {

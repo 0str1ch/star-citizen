@@ -66,8 +66,9 @@ export default function ShipSearch(props) {
             <RefinementList
               attribute="manufacturer"
               transformItems={items => orderBy(items, "label", "asc")}
-              limit={25}
+              limit={5}
               tabIndex={0}
+              showMore
             />
           </Accordion>
           <Accordion title="Sort by Production Status">

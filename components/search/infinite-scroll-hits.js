@@ -148,9 +148,11 @@ function InfiniteHits(props) {
             min-height: 10rem;
           }
 
-          a:hover,
+           {
+            /* a:hover,
           a:focus {
             border: 1px solid var(--glow);
+          } */
           }
 
           a:hover div.ship-info::before {
