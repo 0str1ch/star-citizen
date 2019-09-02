@@ -171,6 +171,7 @@ export default function ShipSearch(props) {
                 text-transform: uppercase;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                letter-spacing: 0.05rem;
               }
 
               .ais-RefinementList-count {
