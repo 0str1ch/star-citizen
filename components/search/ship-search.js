@@ -23,7 +23,7 @@ const searchClient = algoliasearch(
 export default function ShipSearch(props) {
   return (
     <InstantSearch
-      indexName="sc_ships"
+      indexName="sc"
       searchClient={searchClient}
       resultsState={props.resultsState}
       onSearchStateChange={props.onSearchStateChange}
@@ -34,7 +34,7 @@ export default function ShipSearch(props) {
       <section id="application">
         <menu>
           <Configure hitsPerPage={6} />
-          <CustomSearchBox />
+          <CustomSearchBox showLoadingIndicator />
           {/* <HitsPerPage
             defaultRefinement={5}
             items={[
@@ -83,8 +83,9 @@ export default function ShipSearch(props) {
             <RefinementList
               attribute="focus"
               transformItems={items => orderBy(items, "label", "asc")}
-              limit={30}
+              limit={5}
               tabIndex={0}
+              showMore
             />
           </Accordion>
           <CurrentRefinements clearsQuery />
