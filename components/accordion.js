@@ -82,7 +82,7 @@ const Accordion = ({ title, children, onToggle }) => {
           .filter-svg {
             margin-left: 5px;
             width: 5px;
-            height: 9px;
+            height: var(--text-xsmall);
             display: block;
           }
         `}
