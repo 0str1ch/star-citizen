@@ -9,6 +9,7 @@ export default () => (
           --light-blue: #213249;
           --medium-blue: #1c2838;
           --highlight-hue: #8bdfff;
+          --lowlight-hue: rgba(139, 223, 255, 0.5);
           --glow: #da9e00;
           --grey: rgb(43, 47, 49);
           --dark-grey: rgb(32, 36, 39);
