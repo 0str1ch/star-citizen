@@ -19,7 +19,7 @@ function InfiniteHits(props) {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [props, sentinel]);
 
   const { hits } = props;
 
