@@ -19,7 +19,10 @@ const Accordion = ({ title, children, onToggle }) => {
       >
         <h5 className="title">
           {title}
-          <svg viewBox="0 0 8 13" className="filter-svg">
+          <svg
+            viewBox="0 0 8 13"
+            className={`filter-svg ${visibility && "rotate"}`}
+          >
             <path
               d="M.505.495L7.52 6.508.505 12.52z"
               fill="currentColor"
@@ -84,6 +87,11 @@ const Accordion = ({ title, children, onToggle }) => {
             width: 5px;
             height: var(--text-xsmall);
             display: block;
+            transition: transform 0.1s ease-in-out;
+          }
+
+          .rotate {
+            transform: rotate(90deg);
           }
         `}
       </style>
