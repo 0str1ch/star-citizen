@@ -5,6 +5,7 @@ import {
   RefinementList,
   Configure,
   CurrentRefinements,
+  connectStateResults,
   PoweredBy
 } from "react-instantsearch-dom";
 import { InstantSearch } from "./instantsearch";
@@ -190,12 +191,40 @@ export default function ShipSearch(props) {
           <footer></footer>
         </menu>
         <content>
-          <div>
+          <IndexResults>
             <InfiniteHits />
-          </div>
+          </IndexResults>
           <PoweredBy />
         </content>
       </section>
     </InstantSearch>
   );
 }
+
+const IndexResults = connectStateResults(
+  ({ searchState, searchResults, children }) =>
+    searchResults && searchResults.nbHits !== 0 ? (
+      children
+    ) : (
+      <div>
+        <h5>No results have been found for &quot;{searchState.query}&quot;</h5>
+        <CustomClearRefinements />
+        <style jsx>{`
+          div {
+            display: flex;
+            flex-direction: column;
+            place-content: center;
+            height: 100%;
+            width: 100%;
+            color: var(--glow);
+          }
+
+          h5 {
+            text-align: center;
+            font-weight: 400;
+            font-family: var(--monospace);
+          }
+        `}</style>
+      </div>
+    )
+);
