@@ -91,7 +91,7 @@ export default function ShipSearch(props) {
             />
           </Accordion> */}
           <RefinePanel />
-          <CurrentRefinements clearsQuery />
+          {/* <CurrentRefinements clearsQuery /> */}
           <style jsx global>
             {`
               .ais-RefinementList-list,
