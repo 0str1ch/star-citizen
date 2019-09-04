@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connectInfiniteHits, Highlight } from "react-instantsearch-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 function InfiniteHits(props) {
   let sentinel = null;
@@ -22,7 +22,7 @@ function InfiniteHits(props) {
     };
   }, [props, sentinel]);
 
-  const { hits } = props;
+  const { hits, hasMore } = props;
 
   return (
     <div className="search-results">
@@ -30,8 +30,8 @@ function InfiniteHits(props) {
         {hits.map(hit => (
           <motion.li
             key={hit.objectID}
-            whileHover={{ scale: 1.01 }}
-            whileTap={{ scale: 0.99 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
           >
             <a
               href={hit.url}
@@ -62,6 +62,7 @@ function InfiniteHits(props) {
             </a>
           </motion.li>
         ))}
+
         <li
           className="ais-InfiniteHits-sentinel"
           // eslint-disable-next-line no-return-assign
@@ -173,7 +174,8 @@ function InfiniteHits(props) {
             background: transparent;
             color: transparent;
             box-shadow: none;
-            margin: 0;
+            margin: ${hasMore ? "0 0 50% 0" : "0"};
+            grid-column: span 2;
           }
         `}
       </style>

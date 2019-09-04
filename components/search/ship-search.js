@@ -35,8 +35,8 @@ export default function ShipSearch(props) {
     >
       <section id="application">
         <menu>
-          <Configure hitsPerPage={6} />
-          <CustomSearchBox showLoadingIndicator />
+          <Configure hitsPerPage={2} />
+          <CustomSearchBox />
           {/* <HitsPerPage
             defaultRefinement={5}
             items={[
