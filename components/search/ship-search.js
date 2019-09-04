@@ -123,6 +123,7 @@ export default function ShipSearch(props) {
 
               menu .menu-panel {
                 padding: var(--inner-padding);
+                overflow: hidden;
               }
 
               content {

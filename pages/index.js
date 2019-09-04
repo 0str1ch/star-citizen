@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Router from "next/router";
 import qs from "qs";
 import { Head, findResultsState, ShipSearch } from "../components/search";
@@ -11,11 +10,6 @@ const searchStateToUrl = searchState =>
   searchState ? `${window.location.pathname}?${qs.stringify(searchState)}` : "";
 
 export default class extends React.Component {
-  static propTypes = {
-    resultsState: PropTypes.object,
-    searchState: PropTypes.object
-  };
-
   constructor(props) {
     super(props);
     this.onSearchStateChange = this.onSearchStateChange.bind(this);

@@ -2,6 +2,7 @@ import React from "react";
 import { orderBy } from "lodash";
 import { RefinementList } from "react-instantsearch-dom";
 import Accordion from "../accordion";
+import CustomRefinement from "./custom-refinement";
 
 function RefinePanel() {
   return (
