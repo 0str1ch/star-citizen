@@ -3,6 +3,7 @@ import { connectSearchBox } from "react-instantsearch-dom";
 import UIButton from "../ui-button";
 import CustomClearRefinements from "./custom-clear-refinements";
 import CustomStats from "./custom-stats";
+import { MediaQueryConsumer } from "../media-query";
 
 function showStalled() {
   return "Search is booting up...";
@@ -10,7 +11,13 @@ function showStalled() {
 
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
   <div className="search-wrapper">
-    <form noValidate action="" role="search" className="searchbox menu-panel">
+    <form
+      noValidate
+      action=""
+      role="search"
+      className="searchbox menu-panel"
+      onSubmit={() => refine(currentRefinement)}
+    >
       <input
         type="search"
         placeholder={
