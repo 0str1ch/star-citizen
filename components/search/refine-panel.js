@@ -6,7 +6,7 @@ import CustomRefinement from "./custom-refinement";
 
 function RefinePanel() {
   return (
-    <div>
+    <div className="refine-panel">
       <Accordion title="Sort by Manufacturer">
         <RefinementList
           attribute="manufacturer"
@@ -39,6 +39,10 @@ function RefinePanel() {
           .ais-InfiniteHits-list,
           .ais-Pagination-list {
             list-style: none;
+          }
+
+          .refine-panel {
+            padding: 0 0 var(--inner-padding) 0;
           }
 
           li.ais-RefinementList-item {
