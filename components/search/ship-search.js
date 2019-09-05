@@ -87,8 +87,6 @@ export default function ShipSearch(props) {
                 overflow-y: scroll;
                 -webkit-overflow-scrolling: touch;
                 background: var(--primary-hue);
-                height: 100%;
-                min-height: 100vh;
               }
               li.ais-RefinementList-item {
                 height: 2rem;
