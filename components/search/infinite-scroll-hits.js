@@ -76,12 +76,20 @@ function InfiniteHits(props) {
           }
           ul {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             grid-gap: var(--outer-padding);
+            overflow: hidden;
+            width: 100%;
             max-width: 100%;
             width: 100%;
             margin: 0;
             padding: 0;
+          }
+
+          @media (min-width: 1200px) {
+            ul {
+              grid-template-columns: 1fr 1fr;
+            }
           }
 
           img {
@@ -174,8 +182,14 @@ function InfiniteHits(props) {
             background: transparent;
             color: transparent;
             box-shadow: none;
-            margin: ${hasMore ? "0 0 50% 0" : "0"};
-            grid-column: span 2;
+            margin: ${hasMore ? "0 0 15rem 0" : "0"};
+          }
+
+          @media (min-width: 1200px) {
+            li.ais-InfiniteHits-sentinel {
+              grid-column: span 2;
+              margin: ${hasMore ? "0 0 20rem 0" : "0"};
+            }
           }
         `}
       </style>

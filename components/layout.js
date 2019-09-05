@@ -75,7 +75,7 @@ function Layout({ title, description, children }) {
 
             /** Moved from Meta.js */
             body {
-              background-color: var(--site-bg);
+              background: var(--primary-hue);
               position: relative;
               width: 100%;
               min-height: 100%;

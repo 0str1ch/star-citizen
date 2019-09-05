@@ -11,13 +11,7 @@ function showStalled() {
 
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
   <div className="search-wrapper">
-    <form
-      noValidate
-      action=""
-      role="search"
-      className="searchbox menu-panel"
-      onSubmit={() => refine(currentRefinement)}
-    >
+    <form noValidate action="" role="search" className="searchbox menu-panel">
       <input
         type="search"
         placeholder={
@@ -28,11 +22,12 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
         onKeyDown={event => refine(event.currentTarget.value)}
       />
       <div className="button-wrapper">
-        <UIButton onClick={() => refine("")} type="button">
+        <UIButton
+          onClick={() => refine("")}
+          type="button"
+          disabled={!currentRefinement.length}
+        >
           Reset Search
-        </UIButton>
-        <UIButton onClick={() => refine(currentRefinement)} type="button">
-          Search
         </UIButton>
         <CustomClearRefinements />
       </div>
