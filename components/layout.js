@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Theme from "./theme";
 import Header from "./header";
+import { withMediaQuery } from "./media-query";
 
 function Layout({ title, description, children }) {
   return (
@@ -514,4 +515,4 @@ function Layout({ title, description, children }) {
   );
 }
 
-export default Layout;
+export default withMediaQuery(Layout);

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { connectSearchBox } from "react-instantsearch-dom";
 import UIButton from "../ui-button";
 import CustomClearRefinements from "./custom-clear-refinements";
@@ -17,10 +18,14 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
         }
         value={currentRefinement}
         onChange={event => refine(event.currentTarget.value)}
+        onKeyDown={event => refine(event.currentTarget.value)}
       />
       <div className="button-wrapper">
         <UIButton onClick={() => refine("")} type="button">
           Reset Search
+        </UIButton>
+        <UIButton onClick={() => refine(currentRefinement)} type="button">
+          Search
         </UIButton>
         <CustomClearRefinements />
       </div>
