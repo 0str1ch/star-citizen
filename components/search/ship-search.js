@@ -50,6 +50,7 @@ export default function ShipSearch(props) {
               section#application {
                 display: flex;
                 flex-direction: column;
+                overflow: hidden;
               }
 
               @media (min-width: 1200px) {
@@ -59,7 +60,6 @@ export default function ShipSearch(props) {
                       calc(100% - 18rem),
                       1fr
                     );
-                  overflow: hidden;
                   height: calc(100vh - 2rem);
                 }
               }
@@ -74,6 +74,7 @@ export default function ShipSearch(props) {
                 background: var(--dark-bg);
                 color: var(--highlight-hue);
                 width: 100%;
+                height: 100%;
               }
 
               menu .menu-panel {
@@ -85,6 +86,8 @@ export default function ShipSearch(props) {
                 overflow-y: scroll;
                 -webkit-overflow-scrolling: touch;
                 background: var(--primary-hue);
+                height: 100%;
+                min-height: 100vh;
               }
               li.ais-RefinementList-item {
                 height: 2rem;
