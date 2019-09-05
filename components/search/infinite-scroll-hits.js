@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connectInfiniteHits, Highlight } from "react-instantsearch-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 function InfiniteHits(props) {
   let sentinel = null;
