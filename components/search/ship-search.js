@@ -37,59 +37,6 @@ export default function ShipSearch(props) {
         <menu>
           <Configure hitsPerPage={2} />
           <CustomSearchBox />
-          {/* <HitsPerPage
-            defaultRefinement={5}
-            items={[
-              { value: 5, label: "Show 5 results" },
-              { value: 10, label: "Show 10 results" },
-              { value: 25, label: "Show 25 results" }
-            ]}
-          /> */}
-          {/* <div className="manufacturer-sort filter">
-            <div className="filter-heading">
-              <h5>
-                Sort by Manufacturer{" "}
-                <svg viewBox="0 0 8 13" className="filter-svg">
-                  <path
-                    d="M.505.495L7.52 6.508.505 12.52z"
-                    fill="currentColor"
-                    fillRule="evenodd"
-                  ></path>
-                </svg>
-              </h5>
-            </div>
-            <RefinementList
-              attribute="manufacturer"
-              transformItems={items => orderBy(items, "label", "asc")}
-              limit={25}
-            />
-          </div> */}
-          {/* <Accordion title="Sort by Manufacturer">
-            <RefinementList
-              attribute="manufacturer"
-              transformItems={items => orderBy(items, "label", "asc")}
-              limit={5}
-              tabIndex={0}
-              showMore
-            />
-          </Accordion>
-          <Accordion title="Sort by Production Status">
-            <RefinementList
-              attribute="production_status"
-              transformItems={items => orderBy(items, "label", "asc")}
-              limit={5}
-              tabIndex={0}
-            />
-          </Accordion>
-          <Accordion title="Sort by Role">
-            <RefinementList
-              attribute="focus"
-              transformItems={items => orderBy(items, "label", "asc")}
-              limit={5}
-              tabIndex={0}
-              showMore
-            />
-          </Accordion> */}
           <RefinePanel />
           {/* <CurrentRefinements clearsQuery /> */}
           <style jsx global>
