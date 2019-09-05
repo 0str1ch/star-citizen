@@ -51,6 +51,7 @@ export default function ShipSearch(props) {
                 display: flex;
                 flex-direction: column;
                 overflow: hidden;
+                width: 100%;
               }
 
               @media (min-width: 1200px) {

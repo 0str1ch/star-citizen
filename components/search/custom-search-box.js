@@ -19,7 +19,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
         onChange={event => refine(event.currentTarget.value)}
       />
       <div className="button-wrapper">
-        <UIButton onClick={() => refine("")} type="submit">
+        <UIButton onClick={() => refine("")} type="button">
           Reset Search
         </UIButton>
         <CustomClearRefinements />
