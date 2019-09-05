@@ -1,9 +1,7 @@
-import React, { useState } from "react";
 import { connectSearchBox } from "react-instantsearch-dom";
 import UIButton from "../ui-button";
 import CustomClearRefinements from "./custom-clear-refinements";
 import CustomStats from "./custom-stats";
-import { MediaQueryConsumer } from "../media-query";
 
 function showStalled() {
   return "Search is booting up...";
@@ -18,8 +16,8 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
           isSearchStalled ? showStalled() : "Type to start searching..."
         }
         value={currentRefinement}
-        onChange={event => refine(event.currentTarget.value)}
-        onKeyDown={event => refine(event.currentTarget.value)}
+        onChange={e => refine(e.currentTarget.value)}
+        onKeyDown={e => refine(e.currentTarget.value)}
       />
       <div className="button-wrapper">
         <UIButton
