@@ -7,7 +7,7 @@ import CustomRefinement from "./custom-refinement";
 function RefinePanel() {
   return (
     <div className="refine-panel">
-      <Accordion title="Sort by Manufacturer">
+      <Accordion title="Sort by Manufacturer" startVisible>
         <RefinementList
           attribute="manufacturer"
           transformItems={items => orderBy(items, "label", "asc")}

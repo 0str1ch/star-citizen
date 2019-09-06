@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-const Accordion = ({ title, children, onToggle }) => {
-  const [visibility, setVisibility] = useState(false);
+const Accordion = ({ title, children, onToggle, startVisible }) => {
+  const [visibility, setVisibility] = useState(!!startVisible);
+
   return (
     <div className="manufacturer-sort filter">
       <div
