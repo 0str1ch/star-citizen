@@ -15,15 +15,23 @@ export default function Header() {
         {`
           header {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             margin: 0;
             width: 100%;
-            height: 2rem;
-            padding: 0 var(--inner-padding);
+            padding: var(--outer-padding) var(--inner-padding);
             text-align: center;
             background: var(--light-blue);
             place-items: center center;
             border-bottom: 2px solid var(--glow);
+          }
+
+          @media (min-width: 1200px) {
+            header {
+              display: flex;
+              flex-direction: row;
+              height: 2rem;
+              padding: 0 var(--inner-padding);
+            }
           }
 
           p {
