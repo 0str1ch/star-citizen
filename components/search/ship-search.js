@@ -76,6 +76,8 @@ export default function ShipSearch(props) {
                 color: var(--highlight-hue);
                 width: 100%;
                 height: 100%;
+                scrollbar-color: #929599 var(--highlight-hue);
+                scrollbar-width: thin;
               }
 
               menu .menu-panel {
@@ -87,6 +89,8 @@ export default function ShipSearch(props) {
                 overflow-y: scroll;
                 -webkit-overflow-scrolling: touch;
                 background: var(--primary-hue);
+                scrollbar-color: #929599 var(--highlight-hue);
+                scrollbar-width: thin;
               }
               li.ais-RefinementList-item {
                 height: 2rem;

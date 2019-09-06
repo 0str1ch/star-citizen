@@ -499,6 +499,43 @@ function Layout({ title, description, children }) {
               border: none;
             }
 
+            /** Mozilla Scrollbar */
+
+            ::-moz-scrollbar {
+              width: 6px;
+              height: 5px;
+            }
+
+            ::-moz-scrollbar-button {
+              width: 0;
+              height: 0;
+            }
+
+            ::-moz-scrollbar-thumb {
+              background: #929599;
+              border: none;
+              border-radius: 50px;
+            }
+
+            ::-moz-scrollbar-track {
+              background: #ebecf0;
+              border: none;
+              border-radius: 0;
+            }
+
+            ::-moz-scrollbar-corner {
+              background: transparent;
+            }
+            ::-moz-scrollbar-thumb {
+              background: var(--highlight-hue);
+              border: none;
+            }
+
+            ::-moz-scrollbar-track {
+              background: #405171;
+              border: none;
+            }
+
              {
               /* Custom Checkboxes */
             }
