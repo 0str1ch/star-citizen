@@ -9,7 +9,7 @@ export default class StarCitizenSearchDB extends Document {
 
   render() {
     return (
-      <Html lang="en-US">
+      <Html>
         <Head>
           <meta charSet="UTF-8" />
           <meta
