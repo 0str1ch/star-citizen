@@ -38,8 +38,9 @@ function InfiniteHits(props) {
               target="_blank"
               rel="noopener noreferrer"
               tabIndex={0}
+              key={hit.objectID}
             >
-              <img src={hit.media} alt={hit.name} />
+              <img src={hit.media} alt={hit.name} key={hit.objectID} />
               <span className="ship-role">{hit.focus}</span>
               <div className="ship-info">
                 <h3>

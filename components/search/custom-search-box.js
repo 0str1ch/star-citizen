@@ -3,17 +3,15 @@ import UIButton from "../ui-button";
 import CustomClearRefinements from "./custom-clear-refinements";
 import CustomStats from "./custom-stats";
 
-function showStalled() {
-  return "Search is booting up...";
-}
-
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => (
   <div className="search-wrapper">
     <form noValidate action="" role="search" className="searchbox menu-panel">
       <input
         type="search"
         placeholder={
-          isSearchStalled ? showStalled() : "Type to start searching..."
+          isSearchStalled
+            ? "Search is booting up..."
+            : "Type to start searching..."
         }
         value={currentRefinement}
         onChange={e => refine(e.currentTarget.value)}
