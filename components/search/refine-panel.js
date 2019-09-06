@@ -2,12 +2,11 @@ import React from "react";
 import { orderBy } from "lodash";
 import { RefinementList } from "react-instantsearch-dom";
 import Accordion from "../accordion";
-import CustomRefinement from "./custom-refinement";
 
 function RefinePanel() {
   return (
     <div className="refine-panel">
-      <Accordion title="Sort by Manufacturer" startVisible>
+      <Accordion title="Sort by Manufacturer">
         <RefinementList
           attribute="manufacturer"
           transformItems={items => orderBy(items, "label", "asc")}
