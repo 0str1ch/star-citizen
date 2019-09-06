@@ -78,7 +78,7 @@ function InfiniteHits(props) {
             display: grid;
             grid-template-columns: 1fr;
             grid-gap: var(--outer-padding);
-            overflow-x: hidden;
+            overflow: hidden;
             width: 100%;
             max-width: 100%;
             width: 100%;
