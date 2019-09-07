@@ -93,6 +93,12 @@ function InfiniteHits(props) {
             }
           }
 
+          @media (min-width: 1440px) {
+            ul {
+              grid-template-columns: 1fr 1fr 1fr;
+            }
+          }
+
           img {
             object-fit: cover;
             width: auto;
@@ -121,7 +127,7 @@ function InfiniteHits(props) {
             width: 100%;
             background: linear-gradient(
                 45deg,
-                rgba(28, 38, 54, 1),
+                var(--dark-bg),
                 rgba(28, 40, 56, 0)
               )
               no-repeat;
@@ -140,7 +146,7 @@ function InfiniteHits(props) {
           }
 
           h3 {
-            font-size: var(--text-large);
+            font-size: var(--text-normal);
             text-shadow: var(--text-glow);
             text-transform: uppercase;
           }

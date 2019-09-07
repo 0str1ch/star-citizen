@@ -35,7 +35,7 @@ export default function ShipSearch(props) {
     >
       <section id="application">
         <menu>
-          <Configure hitsPerPage={2} />
+          <Configure hitsPerPage={3} />
           <CustomSearchBox />
           <RefinePanel />
           {/* <CurrentRefinements clearsQuery /> */}
